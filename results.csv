@@ -1,0 +1,1453 @@
+﻿prompt_id,set,category,language,config,route_reason,routed_tier,classifier,pred_language,pred_difficulty,difficulty_prob,model,final_tier,status,fail_reason,fallback,fallback_reason,first_attempt_model,input_tokens,output_tokens,reasoning_tokens,model_cost_inr,first_attempt_cost_inr,router_tokens,router_cost_inr,cost_inr,model_latency_ms,first_attempt_latency_ms,router_latency_ms,latency_ms,rate_limit_retries,from_cache,finish_reason,error,answer,expected_answer,exact_match,quality_score,judge_reason,judge_input_tokens,judge_output_tokens,judge_cost_inr
+T01,test,classification,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,115,102,91,0.0037,0.0,0,0.0,0.0037,698.5,0.0,0.0,698.5,0,no,stop,,fraud,fraud,yes,5,The answer identifies the correct category and follows the instruction to reply with the category only.,260,29,0.0305
+T02,test,classification,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,116,109,99,0.0039,0.0,0,0.0,0.0039,579.1,0.0,0.0,579.1,0,no,stop,,service,service,yes,5,"The answer correctly identifies the category as 'service' based on the context of branch closure and lack of information regarding passbook updates, matching the reference answer.",260,43,0.0358
+T03,test,classification,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,110,48,38,0.0021,0.0,0,0.0,0.0021,653.6,0.0,0.0,653.6,0,no,stop,,billing,billing,yes,5,"The answer correctly identifies the category as billing, matching the reference answer and adhering to the format constraints.",255,33,0.0317
+T04,test,extraction,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,119,75,64,0.003,0.0,0,0.0,0.003,651.3,0.0,0.0,651.3,0,no,stop,,18750,18750,yes,5,The extracted number is correct and matches the required format.,279,23,0.0297
+T05,test,extraction,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,117,117,101,0.0041,0.0,0,0.0,0.0041,650.6,0.0,0.0,650.6,0,no,stop,,SL-2207-88413,SL-2207-88413,yes,5,The answer correctly extracts the policy number exactly as requested and matches the reference answer.,292,28,0.0326
+T06,test,classification,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,122,49,38,0.0022,0.0,0,0.0,0.0022,549.1,0.0,0.0,549.1,0,no,stop,,card_block,card_block,yes,5,The answer correctly identifies the intent as 'card_block' and follows the instruction to reply with the label only.,268,34,0.033
+T07,test,classification,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,107,37,27,0.0018,0.0,0,0.0,0.0018,295.2,0.0,0.0,295.2,0,no,stop,,Positive,positive,yes,5,Correctly identifies the sentiment as positive and follows the one-word constraint.,250,26,0.0286
+T08,test,extraction,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,119,655,640,0.0194,0.0,0,0.0,0.0194,2134.2,0.0,0.0,2134.2,0,no,stop,,KVRB0001234,KVRB0001234,yes,5,Correctly extracted the IFSC code and followed the instruction to reply with the code only.,293,30,0.0334
+T09,test,summary,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,456,232,120,0.0098,0.0,0,0.0,0.0098,1283.2,0.0,0.0,1283.2,0,no,stop,,"- **Customer’s issue:** Duplicate Rs 24,999 charge on the credit‑card statement for a single mobile‑phone purchase.  
+- **Agent’s actions:** Verified identity, identified the duplicate transaction, opened a dispute (ref. DSP‑558201), and applied a temporary credit of Rs 24,999 to cover interest during the investigation.  
+- **Next step:** Customer to email the order confirmation proving a single order to the disputes team (SMS with the email address will be sent shortly).",,,5,"The summary is accurate, complete, covers all three required points, and uses the correct language.",761,31,0.069
+T10,test,summary,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,447,164,30,0.0078,0.0,0,0.0,0.0078,608.1,0.0,0.0,608.1,0,no,stop,,"- **Customer’s issue:** Wants to close a personal loan early after receiving an annual bonus and is unsure about the payoff amount and applicable charges.  
+- **Agent’s actions:** Confirmed account details, calculated total foreclosure cost (principal + 2 % charge + GST + accrued interest), explained the applicable terms, promised to email the foreclosure letter, and temporarily halted the upcoming auto‑debit.  
+- **Next step:** Customer will receive and review the foreclosure letter, make the net‑bank payment, and upon receipt of payment, the agent will issue a no‑dues certificate within 10 working days.",,,5,"The summary is accurate, concise, and fully addresses the three required points using the correct language and script.",763,33,0.0699
+T11,test,summary,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,408,205,103,0.0087,0.0,0,0.0,0.0087,995.2,0.0,0.0,995.2,0,no,stop,,"- **Customer’s issue:** Father admitted for knee surgery; hospital says cashless approval has not been processed because doctor’s notes are missing.  
+- **Agent’s actions:** Obtained policy number, explained the hold (waiting period and missing notes), marked the request as urgent, outlined the timeline for approval and reimbursement option.  
+- **Next step:** Hospital sends the required notes within two hours; agent will call back by 7 pm with an update.",,,5,"The answer correctly identifies the issue, agent's actions, and next steps in concise bullet points, matching the transcript accurately.",681,36,0.0649
+T12,test,summary,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,437,250,123,0.0102,0.0,0,0.0,0.0102,830.0,0.0,0.0,830.0,0,no,stop,,"- **Customer’s issue:** Video‑KYC on the Sahyadri Bank app keeps timing out after a minute, displaying “session expired” each time.  
+- **Agent’s actions:** Diagnosed the likely cause (camera permission), guided the customer to change the app’s camera permission to “Allow while using the app,” stayed on the line to watch the retry, and explained backup options (schedule a slot or visit a branch).  
+- **Next step:** The account will be activated within 24 hours and the customer will receive an SMS with the new account number.",,,5,"The answer correctly identifies the issue, agent actions, and next steps based on the transcript, is complete, and uses the correct language.",730,39,0.0697
+T13,test,summary,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,431,230,93,0.0095,0.0,0,0.0,0.0095,778.3,0.0,0.0,778.3,0,no,stop,,"- **Customer’s issue:** A Rs 6,200 UPI payment to a grocery shop failed – the amount was deducted from her account but remains in “pending reversal” status after five days.  
+- **Agent’s actions:** Confirmed the transaction using the reference number, explained RBI rules, raised a fast‑track complaint (UPI‑77341), assured the reversal within two working days and that compensation for the delay will be credited separately.  
+- **Next step:** If the amount isn’t returned by Friday, the customer should call with the complaint number or check the dispute status in the app’s Help section.",,,5,"The answer is accurate, complete, and follows the requested format, correctly identifying the issue, agent actions, and next steps.",753,37,0.0707
+T14,test,summary,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,427,348,179,0.0129,0.0,0,0.0,0.0129,854.4,0.0,0.0,854.4,0,no,stop,,"- **Customer’s issue:** The customer received a notice that his home‑loan interest rate will rise from 8.4 % to 8.9 %, and he wants to know how this will affect his EMI and repayment period.  
+- **Agent’s response:** The agent explained the repo‑rate linkage, outlined three ways to manage the change (extend tenure, bump up the EMI to ₹32,100, or make a prepayment), gave the deadline (20 Dec) to lock in the higher EMI, and offered to email a side‑by‑side comparison.  
+- **Next step:** The customer will discuss the options with his wife and the agent will send the emailed comparison; the customer can then decide whether to extend tenure, increase EMI, or prepay.",,,5,"The summary is accurate, complete, and uses the correct language; it correctly identifies the issue, the agent's actions including specific details like tenure extension and EMI amount, and the agreed next steps.",780,52,0.0784
+T15,test,translation,en-to-marathi,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,114,334,270,0.0102,0.0,0,0.0,0.0102,858.1,0.0,0.0,858.1,0,no,stop,,"आदरणीय ग्राहक,
+
+आपल्या दोन चाकी कर्जाची EMI रु. 3,200 ही 5 डिसेंबर रोजी देय आहे.  
+उशीर शुल्क टाळण्यासाठी खात्यात पुरेसा शिल्लक ठेवावा.",,,5,"The translation is accurate, natural, and uses the correct Marathi script, preserving all key details like amounts and dates.",338,36,0.039
+T16,test,translation,en-to-tamil,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,110,328,258,0.01,0.0,0,0.0,0.01,1062.5,0.0,0.0,1062.5,0,no,stop,,"உங்கள் வாழ்நாள் காப்பீட்டு பாலிசி 20 டிசம்பர் வரை ரூ. 11,500 பிரீமியம் செலுத்தப்படாவிட்டால் நிறுத்தப்படும். Shubh Life அப்பை பயன்படுத்தி உடனே பணம் செலுத்துங்கள்.",,,4,"The translation is mostly correct and idiomatic, but there is a slight semantic shift: 'lapse' is translated as 'நிறுத்தப்படும்' (stopped/suspended) rather than 'பிரபலமடையும்' (lapse), and the brand name 'Shubh Life' and 'app' are left in English, which is common but slightly reduces completeness. The Tamil script and overall meaning are preserved well.",350,101,0.0644
+T17,test,translation,en-to-bengali,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,115,474,399,0.0142,0.0,0,0.0,0.0142,892.0,0.0,0.0,892.0,0,no,stop,,"আমরা আপনার নেটব্যাংকিং-এ নতুন ডিভাইস থেকে লগইন লক্ষ্য করেছি।  
+যদি এটি আপনার না হয়ে থাকে, সাথে সাথে ১৮০০‑০০০‑১২৩৪ নম্বরে কল করুন।  
+আপনার OTP কখনও কারো সাথে শেয়ার করবেন না।",,,5,"The translation is accurate, natural, and uses appropriate formatting for the Bengali context.",362,29,0.0382
+T18,test,translation,en-to-hindi,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,99,185,143,0.0059,0.0,0,0.0,0.0059,616.6,0.0,0.0,616.6,0,no,stop,,"आपका अक्टूबर का खाता विवरण तैयार है। आप इसे ऐप में **खाता** के तहत, फिर **विवरण** से डाउनलोड कर सकते हैं।",,,3,"The translation uses incorrect terminology for 'account,' translating 'खाता' (khaata) instead of 'खाते' or 'अकाउंट,' which is a noticeable error in banking context.",289,53,0.0417
+T19,test,translation,en-to-kannada,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,105,274,202,0.0085,0.0,0,0.0,0.0085,859.4,0.0,0.0,859.4,0,no,stop,,"ನಿಮ್ಮ ₹ 42,000 ರೂಪಾಯಿಗಳ ದಾವೆ ಅನುಮೋದಿಸಲಾಗಿದೆ. ಮೊತ್ತ 3 ಕಾರ್ಯ ದಿನಗಳ ಒಳಗೆ ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಜಮಾ ಮಾಡಲಾಗುತ್ತದೆ.",,,4,"The Kannada translation is accurate and conveys the meaning well, but it uses a somewhat literal phrasing for 'claim' (ದಾವೆ) and 'credited' (ಜಮಾ ಮಾಡಲಾಗುತ್ತದೆ), which is grammatically fine but less idiomatic than standard banking Kannada.",351,71,0.0532
+T20,test,indic,hindi,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,138,93,83,0.0036,0.0,0,0.0,0.0036,590.1,0.0,0.0,590.1,0,no,stop,,billing,billing,yes,5,The answer correctly categorizes the complaint as a billing issue and follows the instruction to provide only the English category name.,300,35,0.0358
+T21,test,indic,hindi,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,123,386,302,0.0118,0.0,0,0.0,0.0118,864.2,0.0,0.0,864.2,0,no,stop,,आपके क्लेम के देरी के लिए हमें खेद है। हमारी टीम ने आपके क्लेम को 20 दिन से अधिक समय से जाँच कर रही है और यह अगले 48 घंटे में निपटारा हो जाएगा। यदि आपको आगे सहायता की आवश्यकता हो तो कृपया हमारे ग्राहक सेवा हेल्पलाइन 1800‑123‑456 पर संपर्क करें।,,,3,"जैसा कि अनुरोध किया गया था, 3 वाक्य में अगला कदम (सहायता हेल्पलाइन) का ज़िक्र है, लेकिन जवाब यह मानकर चला गया कि 20 दिन का समय सीमा समाप्त हुई है, और ग्राहक के असंतोष का दूर करने का कोई प्रत्यक्ष कदम (मामला फिर से जाँचने का) नहीं बताया गया है।",394,122,0.0757
+T22,test,indic,hindi,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,120,135,124,0.0047,0.0,0,0.0,0.0047,609.4,0.0,0.0,609.4,0,no,stop,,7850,7850,yes,5,"The answer correctly extracts the numerical value 7850 as instructed, matching the reference answer exactly.",287,33,0.0341
+T23,test,indic,hindi,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,108,343,229,0.0105,0.0,0,0.0,0.0105,852.2,0.0,0.0,852.2,0,no,stop,,"क्रेडिट स्कोर वह अंक है जो बैंक या वित्तीय संस्था आपके पैसे के उपयोग की आदतों के आधार पर देती है। यह स्कोर आपके ऋण लेने की क्षमता और ब्याज दरों को प्रभावित करता है। समय पर बिल चुकाना, ऋण का निपटान करना और क्रेडिट कार्ड का संतुलित उपयोग आपके स्कोर को बढ़ाता है। देर से भुगतान को तुरंत ठीक करना और अपनी क्रेडिट हिस्ट्री की जाँच करना भी मददगार होता है।",,,4,"Correct language, content, and strictly adheres to the 4-sentence limit, though slightly lacks 'simplicity' by using some formal terms like 'वितीय संस्था'.",404,49,0.0489
+T24,test,indic,tamil,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,141,132,121,0.0047,0.0,0,0.0,0.0047,758.0,0.0,0.0,758.0,0,no,stop,,fraud,fraud,yes,5,"The answer correctly identifies the complaint as fraud based on the unauthorized transaction and lack of OTP sharing, matching the reference and required format.",316,38,0.0381
+T25,test,indic,tamil,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,135,324,202,0.0101,0.0,0,0.0,0.0101,670.3,0.0,0.0,670.3,0,no,stop,,"வட்டி விகிதம், இந்திய ரிசர்வ் வங்கியின் கொள்கை விகிதங்கள் மற்றும் சந்தை வட்டி நிலைகளின் மாற்றத்தினால் உயர்வடையலாம். இந்த மாற்றம் உங்கள் கடன் மீதான வட்டி கணக்கில் பிரதிபலிப்பதால் மாதாந்திர EMI (EMI) அதிகரிக்கும். புதிய EMI மதிப்பை கணக்கிட்டு விரைவில் உங்களுக்கு அறிவிப்போம்; மேலும் விளக்கங்கள் தேவைப்பட்டால் எங்கள் வாடிக்கையாளர் சேவையை தொடர்பு கொள்ளவும்.",,,5,"The response is in Tamil, polite, concise (3 sentences), and correctly explains the reason for the interest hike and the impact on EMI while offering further assistance.",449,45,0.0508
+T26,test,indic,bengali,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,141,100,90,0.0038,0.0,0,0.0,0.0038,323.4,0.0,0.0,323.4,0,no,stop,,Service,service,yes,5,"The answer is correct, complete, and in the requested language (English).",301,27,0.0329
+T27,test,indic,bengali,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,108,337,196,0.0103,0.0,0,0.0,0.0103,853.3,0.0,0.0,853.3,0,no,stop,,"টার্ম ইনস্যুরেন্স হলো কেবল মৃত্যু সুরক্ষা; এন্ডাওমেন্ট পলিসি মৃত্যু বা নির্দিষ্ট বয়সে নগদ মূল্য ফেরত দেয়। টার্ম পলিসি সস্তা এবং কেবল কভারেজ দেয়, আর এন্ডাওমেন্ট পলিসি বেশি ব্যয়বহুল কিন্তু সঞ্চয় ও বীমা উভয়ই একত্রে করে। তাই মূল পার্থক্য হলো, টার্ম পলিসি কেবল মৃত্যু কভার করে, এন্ডাওমেন্ট পলিসি মৃত্যু বা নির্দিষ্ট সময়ে অর্থ ফেরত দেয়।",,,5,"The answer correctly explains the key differences between term and endowment insurance in three clear, simple Bengali sentences as requested.",435,36,0.0463
+T28,test,indic,hinglish,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,110,1494,100,0.043,0.0,0,0.0,0.043,1993.7,0.0,0.0,1993.7,0,no,stop,,"## 5 ,000 रुपये ग़लत UPI ID पर भेजने के बाद क्या करें?
+
+**समाधान को 3 प्रमुख चरणों में बाँटते हैं:**
+
+| चरण | क्या करना है | क्यों? |
+|------|-------------|--------|
+| 1 | **अपना बैंक/UPI ऐप से तुरंत संपर्क करें** | ग़लत ट्रांज़ैक्शन को रिवर्स करने का पहला और एकमात्र विकल्प यही है। |
+| 2 | **रिवर्स/रिफंड के लिए बैंक की प्रक्रिया पूरी करें** | बैंक के पास “UPI reversal” या “merchant refund” विकल्प होते हैं, जिनका पालन करना ज़रूरी है। |
+| 3 | **यदि ट्रांज़ैक्शन रिवर्स नहीं होता तो आगे के विकल्प** | बैंक के साथ फ़ॉलो‑अप, पीयूआर (Payee Account Unblock Request) या रिटेलर/उपभोक्ता संरक्षण के रास्ते। |
+
+---
+
+## चरण 1 – बैंक/UPI ऐप से तुरंत संपर्क
+
+| टूल | कैसे पहुँचें | ध्यान रखने योग्य बातें |
+|------|--------------|-----------------------|
+| **UPI ऐप** (Google Pay, BHIM, PhonePe, Paytm आदि) | • ऐप खोलें → **‘Recent Transactions’** → ग़लत ट्रांज़ैक्शन पर टैप करें → “Reverse/Refund” या “Dispute” चुनें। <br>• “Need help?” या “Help & Support” → “Contact Us” | *कभी भी ‘Cancel’ बटन न दबाएँ।* |
+| **बैंक की वेबसाइट / मोबाइल ऐप** | • लॉग‑इन → “Funds Transfer” या “UPI” सेक्शन → “Transaction History” → उस ट्रांज़ैक्शन पर क्लिक → “Request Refund” | *सभी विवरण (ट्रांज़ैक्शन आईडी, तिथि, राशि) लिख कर रखें।* |
+| **बैंक का ग्राहक सेवा नंबर** | • आम तौर पर “24×7” नंबर: 1860‑10‑xxxx (उदाहरण) <br>• “UPI – Reversal” या “Funds Transfer – Problem” विकल्प चुनें। | *ट्रांज़ैक्शन आईडी, रसीद, बैंक अकाउंट नंबर ज़रूर दें।* |
+
+> **टिप:** अगर आप अभी भी ऐप में “Reverse” विकल्प नहीं देखते हैं, तो इसका मतलब है कि ट्रांज़ैक्शन अभी भी “Pending” या “Processing” में है। ऐसे में भी तुरंत बैंक से संपर्क करना ज़रूरी है।
+
+---
+
+## चरण 2 – बैंक की रिवर्स/रिफंड प्रक्रिया
+
+1. **रिवर्स/रिफंड फ़ॉर्म भरें**  
+   - अधिकांश बैंक ऑनलाइन फ़ॉर्म या ग्राहक सेवा के ज़रिये यह काम कराते हैं।  
+   - फ़ॉर्म में ट्रांज़ैक्शन आईडी, ग़लत UPI ID, राशि, और आपकी पहचान (आधार/पैन) की फ़ोटोकॉपी मांगी जा सकती है।
+
+2. **रिफंड के लिए टाइमलाइन**  
+   - **UPI reversal**: 3–7 कार्य दिवस (कुछ बैंक 24–48 घंटे में भी पूरा कर लेते हैं)।  
+   - **रिवर्स न हो पाने की स्थिति** (जैसे कि गलत ID वास्तव में कोई वैध खाते से जुड़ी हो): बैंक आपको “refund” या “chargeback” के विकल्प बताएगा, जो 30–45 दिनों तक लग सकते हैं।
+
+3. **रिफंड की पुष्टि**  
+   - बैंक या UPI ऐप में “Transaction History” → रिफंड ट्रांज़ैक्शन आईडी देखें।  
+   - अगर 10 कार्य दिवस के भीतर कोई अपडेट नहीं आता तो फिर से बैंक से फ़ॉलो‑अप करें।
+
+---
+
+## चरण 3 – अगर रिवर्स/रिफंड काम नहीं करता
+
+| विकल्प | कैसे करें | नोट |
+|--------|-----------|-----|
+| **बैंक में ‘Payer Account Unblock Request (PAUR)’** | • बैंक की वेबसाइट पर “PAUR” फ़ॉर्म भरें। <br>• ग़लत ट्रांज़ैक्शन का विवरण दें। | यह तब काम करता है जब राशि गलत UPI ID के साथ पहले से ही “settled” हो गई हो। |
+| **उपभोक्ता संरक्षण के पास शिकायत दायर करें** | • “Consumer Helpline” (1800‑11‑4222) कॉल करें। <br>• फ़ोन/ई‑मेल के ज़रिये “UPI scam/issue” रिपोर्ट करें। | बैंक को आपकी शिकायत के आधार पर कार्रवाई करनी होगी। |
+| **रिटेलर/उपभोक्ता के साथ संपर्क** | • अगर ग़लत UPI ID किसी व्यापारी या किसी व्यक्ति का है, तो सीधे उनसे संपर्क करके रिफंड की मांग करें। | अगर व्यापारी के साथ भी न हो तो बैंक से “chargeback” के लिए कहें। |
+| **कानूनी मदद** | • अगर राशि बड़ी है और बैंक सहयोग नहीं कर रहा, तो वकील से सलाह लें। | यह सामान्यतः अंतिम विकल्प होता है। |
+
+---
+
+## अतिरिक्त सुझाव
+
+1. **सभी स्क्रीनशॉट और रसीदें सहेजें** – बैंक को डेमो/साक्ष्य के रूप में दिखाना पड़ेगा।  
+2. **ट्रांज़ैक्शन के समय “Pending” या “Processing” की जाँच करें** – यदि यह स्टेटस है, तो रिवर्स करने की संभावना ज़्यादा है।  
+3. **अपनी बैंकिंग ऐप को अपडेटेड रखें** – नए वर्ज़न में रिवर्स या फ़्लैग फ़ीचर्स बेहतर होते हैं।  
+4. **भविष्य में UPI ID दोबारा चेक करें** – “Copy & Paste” या “QR” का इस्तेमाल ज़्यादा सुरक्षित है।  
+
+---
+
+### संक्षिप्त रूप से
+
+1. **UPI ऐप / बैंक ऐप → ‘Recent Transactions’ → ‘Reverse/Refund’**  
+2. **बैंक 24×7 नंबर कॉल → रिवर्स फ़ॉर्म भरें**  
+3. **रिफंड के 3–7 दिन का इंतज़ार करें → अपडेट न मिले तो बैंक फ़ॉलो‑अप**  
+4. **अगर रिवर्स नहीं हुआ तो PAUR, उपभोक्ता संरक्षण या कानूनी सहायता**  
+
+इन स्टेप्स को फॉलो करने पर आप अपनी ₹5,000 राशि जल्द से जल्द वापस पा सकते हैं। शुभकामनाएँ! 🚀",,,2,"The answer is in Hindi Devanagari, whereas the user asked in Hinglish (Roman script), violating the language requirement. Additionally, it provides factually incorrect advice, such as suggesting a 'Payer Account Unblock Request (PAUR)' and 'PEUR' to reverse a transaction, which are not valid procedures for UPI errors.",2023,82,0.1834
+T29,test,indic,hinglish,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,116,88,78,0.0033,0.0,0,0.0,0.0033,327.0,0.0,0.0,327.0,0,no,stop,,Service,service,yes,5,The assistant correctly classified the complaint as 'service' and adhered to the constraint of writing only the category.,265,34,0.0328
+T30,test,doc_qa,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,219,73,62,0.0036,0.0,0,0.0,0.0036,546.4,0.0,0.0,546.4,0,no,stop,,4500,4500,yes,5,The answer correctly identifies the processing fee amount and follows the instruction to reply with the number only.,385,31,0.0407
+T31,test,doc_qa,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,217,79,69,0.0038,0.0,0,0.0,0.0038,829.3,0.0,0.0,829.3,0,no,stop,,36,36,yes,5,The answer correctly calculates 3 years as 36 months and follows the instruction to reply with the number only.,378,35,0.0417
+T32,test,doc_qa,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,183,53,42,0.0028,0.0,0,0.0,0.0028,579.8,0.0,0.0,579.8,0,no,stop,,2350,2350,yes,5,The answer correctly identifies the minimum amount due as 2350 and follows the instruction to reply with the number only.,349,37,0.0402
+T33,test,doc_qa,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,200,84,73,0.0038,0.0,0,0.0,0.0038,551.1,0.0,0.0,551.1,0,no,stop,,111380,111380,yes,5,"The answer correctly extracts the maturity amount as a number only, matching the reference answer exactly.",368,30,0.039
+T34,test,doc_qa,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,187,145,135,0.0054,0.0,0,0.0,0.0054,547.7,0.0,0.0,547.7,0,no,stop,,213,213,yes,5,The answer correctly calculates the remaining EMIs (240 - 27 = 213) and follows the instruction to reply with the number only.,357,45,0.0439
+T35,test,reasoning,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,174,1636,557,0.0475,0.0,0,0.0,0.0475,2277.3,0.0,0.0,2277.3,0,no,stop,,"**Quick comparison**
+
+| Feature | **Plan A** | **Plan B** |
+|---------|------------|------------|
+| **Sum insured** | ₹1,00,00,000 | ₹1,50,00,000 |
+| **Maximum age at purchase** | 60 yrs | 70 yrs |
+| **Term (coverage duration)** | 28 yrs (32 → 60) | 38 yrs (32 → 70) |
+| **Annual premium** | ₹11,800 | ₹18,900 |
+| **Premium ÷ Sum insured** | 1.18 % | 1.26 % |
+| **Claim settlement ratio** | 97.2 % | 98.6 % |
+| **Rider / extra benefit** | None | Critical‑illness rider (covers major cancers, heart disease, etc.) |
+| **Other features** | Basic term cover only | + critical‑illness coverage + wider age window |
+
+---
+
+### 1. **Coverage vs. liabilities**
+
+| Liability | Estimated cost (₹) | Coverage left after paying the liability |
+|-----------|---------------------|------------------------------------------|
+| Home loan | 40 L | **Plan A:** ₹60 L remaining | **Plan B:** ₹90 L remaining |
+| Future education/health of 2 young children (≈ ₹5–10 L per child over 10 yrs) | 10–20 L | **Plan A:** 40–50 L remaining | **Plan B:** 70–80 L remaining |
+
+- **1 crore** comfortably covers the home loan and still leaves ₹40–50 L to meet other future expenses.  
+- **1.5 crore** leaves ₹70–80 L extra, giving a larger buffer for unexpected costs or a higher standard of living for the family.
+
+### 2. **Longevity of protection**
+
+- **Plan A:** Coverage stops at age 60. At that age you might still have a few years left to repay the home loan (if you plan to retire early) and to support children into adulthood.
+- **Plan B:** Extends to age 70, giving 10 yrs more of protection – useful if you want peace of mind that your children are still covered when they’re adults (e.g., if they’re studying abroad, starting a family, etc.).
+
+### 3. **Premium burden**
+
+- **Annual cost**: ₹11,800 vs ₹18,900.  
+- **Cost‑to‑coverage ratio**: 1.18 % vs 1.26 %. The difference is about 6 % higher for Plan B, but the benefit you receive is 50 % higher in sum insured.
+
+### 4. **Claim‑settlement performance**
+
+- **Plan B** has a marginally higher settlement ratio (98.6 % vs 97.2 %). While both are excellent, the extra 1.4 % can be meaningful in the unlikely event of a claim.
+
+### 5. **Additional rider – Critical Illness**
+
+- **Plan B** includes a critical‑illness rider. This pays out a lump sum when a covered illness is diagnosed, providing a safety net that can be used for treatment, rehabilitation or to cover ongoing expenses without depleting the term sum.  
+- **Plan A** has no such rider; you would need a separate policy to cover critical illnesses.
+
+### 6. **Risk tolerance & budget**
+
+| Scenario | Recommendation |
+|----------|----------------|
+| **Higher budget, desire maximum protection & future‑proofing** | **Plan B** |
+| **Tight budget, comfortable with ₹1 crore coverage** | **Plan A** |
+
+---
+
+## Recommendation
+
+**Plan B** is the stronger choice for a 32‑year‑old non‑smoker with a ₹40‑lakh home loan and two young children. The reasons:
+
+1. **Higher sum insured (₹1.5 crore)** gives a larger safety net for the loan, children’s education, unforeseen medical costs and preserves family lifestyle.
+2. **Extended age limit (70 yrs)** means 10 extra years of coverage, protecting you and your family into later life.
+3. **Critical‑illness rider** adds a valuable layer of protection for major illnesses that could otherwise drain finances.
+4. **Slightly better claim‑settlement ratio (98.6 %)** shows a slightly higher probability that your claim will be honored.
+5. **Premium-to-coverage ratio** (1.26 %) is only marginally higher than Plan A (1.18 %), so the cost increase is justified by the extra benefit.
+
+If your monthly budget cannot comfortably absorb the ₹18,900 premium, then Plan A would still provide solid coverage; however, you would miss out on the extra ₹50 L in sum insured, the 10‑year extended protection, and the critical‑illness rider – all of which can be pivotal in protecting your family’s future.",,,5,"The answer provides a detailed, accurate comparison covering all specified factors (premium, cover, age, claim ratio, rider) and makes a well-reasoned recommendation suitable for the profile described.",1575,50,0.1375
+T36,test,reasoning,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,117,3910,3441,0.1113,0.0,0,0.0,0.1113,4660.6,0.0,0.0,4660.6,0,no,stop,,"**EMI (Equated Monthly Installment) – reducing‑balance loan**
+
+| Symbol | Meaning |
+|--------|---------|
+| \(P\) | Principal amount (₹10,00,000) |
+| \(i\) | Monthly interest rate = annual rate / 12 = \(9\% / 12 = 0.75\% = 0.0075\) |
+| \(n\) | Total number of monthly payments = 5 years × 12 months = 60 |
+| \(\text{EMI}\) | Monthly payment (principal + interest) |
+
+---
+
+### 1.  EMI formula  
+
+\[
+\boxed{\text{EMI}
+= P \;\frac{i(1+i)^{\,n}}{(1+i)^{\,n}-1}}
+\]
+
+---
+
+### 2.  Plug in the numbers  
+
+1. **Compute \((1+i)^{\,n}\)**  
+
+\[
+(1+0.0075)^{60}
+= 1.0075^{60}
+\approx 1.565672
+\]
+
+2. **Numerator**
+
+\[
+P \cdot i \cdot (1+i)^{\,n}
+= 10,00,000 \times 0.0075 \times 1.565672
+= 1,000,000 \times 0.01174554
+= 11,745.54
+\]
+
+3. **Denominator**
+
+\[
+(1+i)^{\,n} - 1 = 1.565672 - 1 = 0.565672
+\]
+
+4. **EMI**
+
+\[
+\text{EMI} = \frac{11,745.54}{0.565672}
+\approx 20,742.6
+\]
+
+---
+
+### 3.  Rounded monthly EMI  
+
+\[
+\boxed{\text{EMI} \;\approx\; \text{₹}\;20,743}
+\]
+
+So, the borrower will pay about **₹20,743 per month** for a 5‑year loan of ₹10,00,000 at 9 % annual interest on a reducing balance.",20758,no,2,"The formula and method are correct, but the final EMI calculation is incorrect (answer 20,743 vs reference 20,758), likely due to insufficient precision in the intermediate step for (1+i)^n.",829,62,0.0858
+T37,test,reasoning,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-120b,tier2,ok,,yes,empty,openai/gpt-oss-20b,189,4000,2417,0.2287,0.1144,0,0.0,0.3431,8948.8,4850.9,0.0,13799.7,0,no,length,,"**Short answer:**  
+She should **pre‑pay the home‑loan**. The interest that will be avoided by the pre‑payment is worth roughly ₹ 12 lakh (tax‑free), whereas a 1‑year FD of the same ₹ 3 lakh would give her only about **₹ 15 000** after tax.
+
+Below is a step‑by‑step walk‑through of the numbers and the tax‑implication that leads to that conclusion.
+
+---
+
+## 1. What she already gets from the tax rules
+
+* **Home‑loan interest deduction** under the old regime is limited to **₹ 2  lakh per year** (Section 24(b)).  
+* She is already using the full ₹ 2  lakh each year, so **any extra interest she pays is NOT deductible**.  
+* Consequently, every rupee of interest that she will still have to pay after the ₹ 2  lakh cap is an **after‑tax cost** (no tax shield).
+
+Because of this cap, the “effective” cost of the loan for the part of interest above ₹ 2  lakh is **100 % of the interest amount** (not 70 % as it would be if it were deductible).
+
+---
+
+## 2. Current loan details
+
+| Item | Value |
+|------|-------|
+| Outstanding principal (today) | ₹ 22,00,000 |
+| Rate of interest (annual) | 8.75 % |
+| Remaining tenure | 15 years (180 months) |
+| Monthly interest rate (r) | 8.75 % ÷ 12 = **0.007291667** |
+| EMI (fixed) | **≈ ₹ 2,19,700** (calculated with the standard loan formula) |
+
+*Total interest that would be paid if she does nothing*  
+
+\[
+\begin{aligned}
+\text{EMI} \times n &= 2,19,700 \times 180 = ₹ 39,54,60,000 \\
+\text{Total interest} &= 39,54,60,000 - 22,00,000 = ₹ 17,54,60,000
+\end{aligned}
+\]
+
+(These are the cash‑flows she will actually have to meet; only the first ₹ 2  lakh each year reduces her taxable income.)
+
+---
+
+## 3. What happens if she **pre‑pays ₹ 3  lakh** now (and keeps the EMI unchanged)
+
+* New principal = ₹ 22,00,000 – ₹ 3,00,000 = **₹ 19,00,000**  
+* EMI stays at ₹ 2,19,700.  
+* We solve the loan‑formula for the new number of months ( n' ).
+
+\[
+\begin{aligned}
+A &= \frac{\text{EMI}}{P \times r}
+      = \frac{2,19,700}{19,00,000 \times 0.007291667}
+      \approx 1.585 \\
+\frac{(1+r)^{n'}}{(1+r)^{n'}-1} &= A
+      \;\Longrightarrow\;
+(1+r)^{n'} = \frac{A}{A-1}
+          = \frac{1.585}{0.585}
+          \approx 2.7094 \\
+n' &= \frac{\ln(2.7094)}{\ln(1+r)}
+    = \frac{0.9986}{0.007265}
+    \approx 137.4\ \text{months}
+    \; \approx \; 11.5\ \text{years}
+\end{aligned}
+\]
+
+So the loan would be cleared **≈ 42 months earlier** (180 – 137 ≈ 43 months).
+
+*Total cash outflow after the pre‑payment*
+
+\[
+\begin{aligned}
+\text{Total payments} &= \text{EMI} \times n' \\
+                      &= 2,19,700 \times 137.4 \\
+                      &\approx ₹ 30,18,57,000 \\
+\text{Principal repaid} &= 22,00,000 + 3,00,000 = ₹ 25,00,000 \\
+\text{Interest paid after pre‑payment} &= 30,18,57,000 - 25,00,000 \\
+                                      &\approx ₹ 5,18,57,000
+\end{aligned}
+\]
+
+*Interest saved*  
+
+\[
+\text{Interest saved} = 17,54,60,000 - 5,18,57,000 \approx \mathbf{₹ 12,36,03,000}
+\]
+
+**Tax point:** Because the saved interest is *above* the ₹ 2  lakh deductible limit, **the whole ₹ 12.36  lakh is a net cash‑flow gain** (no tax is lost).
+
+---
+
+## 4. What happens if she puts the ₹ 3  lakh in a 1‑year FD at 7.1 %
+
+\[
+\begin{aligned}
+\text{Interest earned (gross)} &= 3,00,000 \times 0.071 = ₹ 21,300 \\
+\text{Tax @ 30 %} &= 0.30 \times 21,300 = ₹ 6,390 \\
+\text{Net interest (after tax)} &= 21,300 - 6,390 = \mathbf{₹ 14,910}
+\end{aligned}
+\]
+
+So the **effective return** on the FD is only **≈ 0.5 % per annum after tax**.
+
+---
+
+## 5. Comparing the two options
+
+|                               | Pre‑pay loan (₹ 3 L) | 1‑yr FD (₹ 3 L) |
+|-------------------------------|----------------------|----------------|
+| Cash‑flow benefit (after tax) | **₹ 12,36,03,000** (interest saved over ~12 years) | **₹ 14,910** (interest earned in 1 yr) |
+| Liquidity after decision      | Loan balance lower, but cash is tied up for ~12 years (EMI unchanged) | Cash is free after 1 yr |
+| Risk / certainty              | Very high (interest saving is guaranteed) | Low, but return is tiny |
+| Impact on tax deduction       | No loss – she was already using the full ₹ 2 L cap | None |
+
+Even if we **discount** the future interest savings to present value (say at a modest 8 % discount rate), the present‑value of the ₹ 12.36 L saved is still well above the ₹ 15 k that the FD would give.
+
+---
+
+## 6. Practical considerations (optional)
+
+| Issue | How it plays out |
+|-------|------------------|
+| **Cash‑flow flexibility** | After pre‑payment she still has to meet the same EMI, so her monthly outflow does not change. The only difference is that the loan will disappear ~3.5 years earlier than originally planned. |
+| **Emergency fund** | If she needs liquid cash, a 1‑yr FD can be broken (with a penalty). The loan pre‑payment ties up the ₹ 3 L for the next ~12 years. She should be comfortable with that lack of liquidity. |",,,1,"The answer contains massive calculation errors (e.g., stating total interest is ₹17.5 crore instead of ₹17.5 lakh, and interest saved is ₹12.3 crore instead of ₹12.3 lakh), leading to nonsensical comparisons.",2260,67,0.1956
+T38,test,reasoning,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,151,389,236,0.0121,0.0,0,0.0,0.0121,894.2,0.0,0.0,894.2,0,no,stop,,"**Closing balance is not correct.**
+
+- **Opening balance:** ₹48,200  
+- **Total credits:** ₹12,500 + ₹3,750 = ₹16,250  
+- **Total debits:** ₹9,800 + ₹2,450 + ₹15,000 = ₹27,250  
+
+\[
+\text{Correct closing} = \text{Opening} + \text{Credits} - \text{Debits} \\
+= 48,200 + 16,250 - 27,250 = 37,200
+\]
+
+The statement shows ₹37,800, which is ₹600 too high. The correct closing balance should be **₹37,200**.",37200,yes,5,"The calculation is correct (48,200 + 16,250 - 27,250 = 37,200), identifies the error, and matches the reference answer with complete reasoning.",502,61,0.0608
+T39,test,reasoning,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,138,702,407,0.0208,0.0,0,0.0,0.0208,1230.2,0.0,0.0,1230.2,0,no,stop,,"**Step‑by‑step calculation**
+
+| Step | Description | Amount (₹) | Explanation |
+|------|-------------|------------|-------------|
+| 1 | **Original claim amount** | 1,80,000 | Total amount for the claim submitted. |
+| 2 | **Deductible** | –20,000 | Policy has a deductible of ₹20,000 that is taken out first. |
+| 3 | **Amount after deductible** | 1,60,000 | 1,80,000 – 20,000 = 1,60,000. |
+| 4 | **Policyholder’s co‑payment (10 %)** | –16,000 | 10 % of the post‑deductible amount: 1,60,000 × 0.10 = 16,000. |
+| 5 | **Insurer’s payment** | 1,44,000 | 90 % of the post‑deductible amount: 1,60,000 × 0.90 = 1,44,000. |
+| 6 | **Check against sum insured** | 5,00,000 | 1,44,000 ≤ 5,00,000, so the insurer can pay the full amount calculated. |
+
+**Answer:** The insurer will pay **₹1,44,000**.",144000,yes,5,"The calculation is correct, follows the requested steps, and matches the reference answer.",652,28,0.0597
+T40,test,reasoning,english,always_cheapest,baseline: every prompt -> gpt-oss-20b (Groq),tier1,,,,,openai/gpt-oss-20b,tier1,ok,,no,,,224,1708,340,0.0499,0.0,0,0.0,0.0499,2288.1,0.0,0.0,2288.1,0,no,stop,,"Below is a **step‑by‑step risk analysis** of the five transactions that occurred on the card within a 25‑minute window, followed by a recommendation on whether the card should be blocked (or at least temporarily suspended) while an investigation is carried out.
+
+---
+
+## 1. Transaction‑by‑Transaction Breakdown
+
+| Time | Amount | Location / Merchant | Notes |
+|------|--------|---------------------|-------|
+| 10:02 pm | ₹1,200 | Fuel station, Pune | Normal for a local user; low‑risk |
+| 10:09 pm | ₹49,999 | Electronics website | **Large amount** for a typical user who spends < ₹10,000/month |
+| 10:11 pm | ₹49,999 | Same electronics website | Declined – “limit exceeded” | High‑value attempt; indicates an attempted fraud pattern |
+| 10:20 pm | ₹15,000 | Jewellery store, Kolkata | Card‑present purchase in a city far from Pune (≈ 900 km away) |
+| 10:27 pm | ₹2 | Unknown merchant (international verification) | Small “verification” charge; often a sign that the card is being tested by a fraudster |
+
+### Key Observations
+
+1. **Sudden Spike in Spend**  
+   - The cardholder’s usual monthly spend is < ₹10,000. Two attempted ₹49,999 purchases in quick succession far exceed that baseline.  
+   - A single ₹15,000 jewellery purchase also exceeds normal monthly activity.
+
+2. **Geographic Anomaly**  
+   - The first two purchases are local (Pune) and match the cardholder’s residence.  
+   - The 10:20 pm jewellery purchase is in **Kolkata**, ~900 km away, which is highly unusual for someone who never travels long distances for shopping.  
+   - Even a fuel purchase at 10:02 pm would normally be part of daily routine, but its presence in the pattern is benign.
+
+3. **Merchant Type & Risk Profile**  
+   - **Fuel station**: low risk.  
+   - **Electronics website**: higher risk due to large online purchases and potential for account takeover.  
+   - **Jewellery store**: high‑risk due to high‑value, card‑present transactions.  
+   - **Unknown merchant (international verification)**: typical “card‑verification” transaction used by fraudsters to test whether a card is active.
+
+4. **Timing**  
+   - All five transactions occurred within 25 minutes.  
+   - Rapid succession of high‑value attempts suggests automated or orchestrated fraud.
+
+5. **Declined Transaction**  
+   - The second ₹49,999 attempt was declined because the limit was exceeded. This indicates that the fraudster is **trying to maximize the amount** before the system stops them. Declines are a red flag in fraud analytics.
+
+---
+
+## 2. Risk Score Estimation (using a generic fraud‑detection framework)
+
+| Factor | Likelihood | Impact | Combined Risk (high/medium/low) |
+|--------|------------|--------|--------------------------------|
+| **Spend Spike** | High | High | **High** |
+| **Geographic Shift (Kolkata)** | High | High | **High** |
+| **Merchant Category (electronics/jewellery)** | Medium‑High | High | **High** |
+| **Card‑Verification Charge** | Medium | Low | **Medium** |
+| **Declined Attempt** | Medium | Medium | **Medium** |
+| **User Profile (₹10k/month)** | High | Medium | **High** |
+
+**Overall Assessment:** **High Risk** for fraudulent activity.
+
+---
+
+## 3. Recommended Action
+
+| Action | Rationale | Implementation |
+|--------|-----------|----------------|
+| **Temporarily suspend the card** | Protect the cardholder from further unauthorized loss; prevent the fraudster from using the card while the investigation is underway. | Flag the account in the bank’s core system; issue a new card to the cardholder as soon as possible. |
+| **Notify the cardholder** | Transparency & trust; let them know why the card was blocked and what steps they need to take. | Email/SMS alert with instructions to contact the fraud hotline. |
+| **Open an investigation** | Verify whether the cardholder was involved; review the login locations, device fingerprints, etc. | Use AML and fraud analytics modules; involve the compliance team. |
+| **Review transaction history** | Confirm if any other unusual activity exists that may have been missed. | Run a full‑month audit for the account. |
+| **Offer a credit‑limit review** | If the cardholder is legitimate, consider adjusting the limit for future purchases to reduce the risk of false positives. | Discuss with the customer; adjust limits in the risk model. |
+
+---
+
+## 4. Why “Block” (Not Just “Flag”) is the Safer Choice
+
+| Option | Pros | Cons |
+|--------|------|------|
+| **Block immediately** | Eliminates risk of further fraud; shows the bank’s commitment to security. | Potential inconvenience if the cardholder was legitimately using the card. |
+| **Flag only** | Keeps the card active for the user. | Leaves the account vulnerable; the fraudster could still use the card for other transactions. |
+
+Given the **high‑risk indicators** (large out‑of‑state purchase, rapid high‑value attempts, card‑verification test), the safer choice for the bank is to **block** the card.
+
+---
+
+## 5. What Happens Next
+
+1. **Customer Service**: Call the fraud hotline to confirm the activity.  
+2. **Card Replacement**: Issue a new, secure card with a new CVV.  
+3. **Re‑activation**: Once the investigation clears the account, the new card can be re‑activated.  
+4. **Post‑Investigation**: If the cardholder is cleared, the bank may consider lowering the daily/transaction limits temporarily as a precaution.
+
+---
+
+## 6. Bottom Line
+
+- **Yes, the bank should block the card** (or at least place it on a temporary freeze).  
+- This protects the cardholder’s funds, prevents the card from being used for further fraudulent purchases, and gives the bank time to investigate the source of the suspicious activity.  
+
+**Disclaimer:** The above analysis is for informational purposes only and does not constitute official bank policy or legal advice. The bank should follow its own internal fraud‑management procedures and compliance requirements.",,,5,"The answer provides a correct, detailed step-by-step analysis of the fraud pattern (geographic impossible travel, velocity, spend deviation, verification pings) and correctly concludes that the card should be blocked, using the appropriate language and format.",1853,59,0.1619
+T01,test,classification,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,62,46,41,0.0152,0.0,0,0.0,0.0152,2358.8,0.0,0.0,2358.8,0,no,stop,,fraud,fraud,yes,5,The answer identifies the correct category and follows the instruction to reply with the category only.,260,29,0.0305
+T02,test,classification,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,63,44,41,0.0148,0.0,0,0.0,0.0148,13806.4,0.0,0.0,13806.4,0,no,stop,,service,service,yes,5,"The answer correctly identifies the category as 'service' based on the context of branch closure and lack of information regarding passbook updates, matching the reference answer.",260,43,0.0358
+T03,test,classification,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,57,73,69,0.0218,0.0,0,0.0,0.0218,1600.9,0.0,0.0,1600.9,0,no,stop,,billing,billing,yes,5,"The answer correctly identifies the category as billing, matching the reference answer and adhering to the format constraints.",255,33,0.0317
+T04,test,extraction,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,71,226,219,0.0615,0.0,0,0.0,0.0615,3419.6,0.0,0.0,3419.6,0,no,stop,,18750,18750,yes,5,The extracted number is correct and matches the required format.,279,23,0.0297
+T05,test,extraction,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,72,107,93,0.0313,0.0,0,0.0,0.0313,1990.5,0.0,0.0,1990.5,0,no,stop,,SL-2207-88413,SL-2207-88413,yes,5,The answer correctly extracts the policy number exactly as requested and matches the reference answer.,292,28,0.0326
+T06,test,classification,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,68,94,90,0.0278,0.0,0,0.0,0.0278,2397.4,0.0,0.0,2397.4,0,no,stop,,card_block,card_block,yes,5,The answer correctly identifies the intent as 'card_block' and follows the instruction to reply with the label only.,268,34,0.033
+T07,test,classification,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,52,52,49,0.0162,0.0,0,0.0,0.0162,3836.4,0.0,0.0,3836.4,0,no,stop,,Positive,positive,yes,5,Correctly identifies the sentiment as positive and follows the one-word constraint.,250,26,0.0286
+T08,test,extraction,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,77,109,97,0.0321,0.0,0,0.0,0.0321,2636.4,0.0,0.0,2636.4,0,no,stop,,KVRB0001234,KVRB0001234,yes,5,Correctly extracted the IFSC code and followed the instruction to reply with the code only.,293,30,0.0334
+T09,test,summary,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,429,213,39,0.0784,0.0,0,0.0,0.0784,9360.5,0.0,0.0,9360.5,0,no,stop,,"*   **Customer's issue:** The customer was charged twice (Rs 24,999 each) for a single mobile phone purchase made on the 3rd, caused by a website error that prompted them to click ""pay"" a second time.
+*   **Agent's action:** Verified the customer, identified the duplicate transaction (two minutes apart), raised a dispute for the second charge (Ref: DSP-558201), and applied a temporary credit of Rs 24,999 to prevent interest accrual during the investigation.
+*   **Next step:** The customer must email the order confirmation (showing only one order) to the disputes team using the email address sent via SMS; the merchant has up to 30 days to respond, though resolution typically takes 7–10 working days.",,,5,"The answer is correct, complete, and clearly formatted in the requested language, accurately capturing the issue, agent's actions, and next steps.",818,40,0.0767
+T10,test,summary,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,426,239,56,0.0849,0.0,0,0.0,0.0849,5455.5,0.0,0.0,5455.5,0,no,stop,,"*   **Customer's issue:** The customer (Ms. Fernandes, Loan A/c 7700 4521) requested early closure (foreclosure) of her personal loan using her annual bonus and queried the applicable foreclosure charges, believing there should be none after one year.
+*   **What the agent did:** Arjun calculated the total settlement amount (approx. ₹2,25,504), explaining the 2% foreclosure fee + GST and pro-rata interest apply because the loan was sanctioned before the April policy change; he also placed a hold on the December auto-debit and offered to email the relevant agreement clause.
+*   **Next step:** The agent will email a foreclosure letter (valid for 7 days) with payment reference details; upon payment clearance, a no-dues certificate will be issued within 10 working days.",,,5,"The answer correctly identifies the customer's issue, details the agent's actions (including calculations and auto-debit hold), and outlines the next steps accurately based on the transcript.",816,46,0.0788
+T11,test,summary,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,377,225,28,0.0785,0.0,0,0.0,0.0785,8678.0,0.0,0.0,8678.0,0,no,stop,,"- **Customer’s issue:** The customer’s father is scheduled for knee-replacement surgery tomorrow, but the hospital’s cashless pre-authorisation request (submitted yesterday at 4 pm) is on hold because the insurer needs the doctor’s notes to determine whether a three‑year waiting period for a pre‑existing condition applies.  
+- **Agent’s actions:** Verified the policy (SH‑4410‑2291), explained the waiting‑period rule, marked the request as urgent, promised an SMS with the request number for the hospital’s insurance desk, and committed to calling back by 7 pm with an update.  
+- **Next step:** The customer will take the request number to the hospital’s insurance desk immediately so they can upload the doctor’s notes within the next two hours; if approval isn’t granted before surgery, the customer can pay and file a reimbursement claim within 30 days of discharge.",,,5,"The answer is factually accurate, complete, and correctly structured as three bullet points addressing the issue, agent actions, and next steps.",778,39,0.0733
+T12,test,summary,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,397,204,40,0.0743,0.0,0,0.0,0.0743,4189.5,0.0,0.0,4189.5,0,no,stop,,"*   **Customer's issue:** The customer was unable to complete video KYC for a new savings account because the session repeatedly expired and dropped specifically when the camera switched to scan the PAN card, despite being on a stable Wi-Fi connection.
+*   **Agent's action:** The agent reviewed the attempt logs, identified the failure point (camera switch), and guided the customer to change the app's camera permission from ""Ask every time"" to ""Allow while using the app,"" then monitored the subsequent attempt which succeeded.
+*   **Next step:** The account will be activated within 24 hours, and the customer will receive an SMS with the account number; if the fix had failed, the alternatives were booking a scheduled video KYC slot or visiting a branch within the 30-day application validity period.",,,5,"The summary is accurate, complete, covers all three required points (issue, action, next step), and is in the correct language.",774,39,0.073
+T13,test,summary,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,408,238,35,0.0836,0.0,0,0.0,0.0836,8849.7,0.0,0.0,8849.7,0,no,stop,,"*   **Customer's Issue:** A UPI payment of ₹6,200 to a grocery shop was debited from the customer's account but failed to credit the merchant; the automatic reversal had been stuck in a ""pending"" state for five days, exceeding the standard 48-hour timeline.
+*   **Agent's Action:** Located the transaction (Ref: 4123 5567 8890), confirmed the reversal delay, raised a formal complaint (ID: **UPI-77341**) to fast-track the refund, and informed the customer of their eligibility for ₹100/day compensation under RBI guidelines for the delay.
+*   **Next Step:** The refund and compensation are expected to be credited within **2 working days**; if not received by Friday, the customer should call back with the complaint number for escalation to the grievance team or track the status via the app under Help → UPI Disputes.",,,5,"The summary is accurate, covers all required aspects (issue, action, next step), and correctly extracts specific details like transaction reference, complaint ID, and compensation rules from the transcript in the correct language.",817,52,0.0812
+T14,test,summary,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,393,382,208,0.1194,0.0,0,0.0,0.1194,13048.0,0.0,0.0,13048.0,0,no,stop,,"*   **Customer's issue:** The customer received notice that their floating-rate home loan interest rate is increasing from 8.4% to 8.9% due to a repo rate hike and is concerned about the financial impact despite having a clean repayment history.
+*   **Agent's actions:** Explained the rate change is policy-driven (repo-linked) and not performance-based; outlined the default option (extending tenure by ~10 months) plus two alternatives—increasing the EMI to retain the original end date or making a part-prepayment (with no charges)—and confirmed the 20 December deadline to request an EMI increase.
+*   **Next step:** The agent will email a comparison calculation of the ""extended tenure"" vs. ""increased EMI"" options to the customer’s registered email address today for discussion with their spouse.",,,5,"The summary accurately captures the customer's issue, the agent's explanation and options provided, and the agreed next step to email the calculations, all in the correct language.",785,45,0.0761
+T15,test,translation,en-to-marathi,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,62,309,27,0.0821,0.0,0,0.0,0.0821,9769.7,0.0,0.0,9769.7,0,no,stop,,"**Option 1: Formal & Standard (Best for Banking SMS)**
+प्रिय ग्राहक, आपल्या दुपहिया कर्जाचे EMI रु. ३,२०० दिनांक ५ डिसेंबर रोजी देय आहे. विलंब शुल्क टाळण्यासाठी कृपया खात्यात पुरेशी रक्कम ठेवा.
+
+**Option 2: Slightly more conversational (Common in Marathi SMS)**
+प्रिय ग्राहक, आपले दुपहिया कर्जाचे EMI रु. ३,२०० हा ५ डिसेंबरला देय आहे. लेट फी वाचवण्यासाठी खात्यात पुरेशी बॅलेंस टाकून ठेवा.
+
+**Key Vocabulary Used:**
+*   Dear customer = प्रिय ग्राहक
+*   Two-wheeler loan = दुपहिया कर्ज
+*   EMI = EMI (commonly used as is)
+*   Due on = देय आहे / चुकवणे आहे
+*   Please keep enough balance = कृपया पुरेशी रक्कम/बॅलेंस ठेवा
+*   Avoid late fee = विलंब शुल्क/लेट फी टाळण्यासाठी/वाचवण्यासाठी",,,5,"The translation is accurate, natural Marathi for banking context, and includes helpful options and vocabulary notes.",566,32,0.0547
+T16,test,translation,en-to-tamil,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,61,731,202,0.1894,0.0,0,0.0,0.1894,18789.9,0.0,0.0,18789.9,0,no,stop,,"Here are a few ways to translate this into Tamil, depending on the desired tone (formal SMS style vs. slightly more conversational):
+
+### **Option 1: Formal & Standard (Best for SMS/Official Notification)**
+> **உங்கள் உயிர் காப்பீட்டு கொள்கை, ரூ. 11,500 கடன் பணம் டிசம்பர் 20-க்குள் செலுத்தப்படவில்லை எனில் காலாவதியடையும். தடவேகமாக Shubh Life ആப் மூலம் செலுத்துங்கள்.**
+
+### **Option 2: Slightly more natural flow (Good for App Push Notifications)**
+> **ரூ. 11,500 பிரீமியம் டிசம்பர் 20-നு முன் செலுத்தப்படவில்லை எனில், உங்கள் உயிர் காப்பீட்டு கொள்கை நிரக்கத்தில் போய்விடும். உடனே Shubh Life ஆப்பை பயன்படுத்தி செலுத்தவும்.**
+
+### **Option 3: Concise (Strict 160-char SMS style)**
+> **வாழ்த்து: உங்கள் கொள்கை ரூ. 11,500 செலுத்தாமல் டிச. 20-ல் காலாவதியாகும். Shubh Life ஆப்பில் இப்போதே பணம் செலுத்துங்கள்.**
+
+---
+
+### **Key Vocabulary Used:**
+*   **Life Insurance Policy:** உயிர் காப்பீட்டு கொள்கை (Uyir Kaappittu Kolkai)
+*   **Lapse:** காலாவதியடையும் (Kaalavadhiyadaiyum) / நிரக்கத்தில் போய்விடும் (Nirakkathil poyvidum)
+*   **Premium:** பிரீமியம் (Premium) / கடன் பணம் (Kadana Panam)
+*   **Paid/Settled:** செலுத்தப்பட்டது (Seluthappattathu) / செலுத்தினால் (Seluthinaal)
+*   **By [Date]:** [தேதி]-க்குள் / [தேதி]-க்கு முன்
+*   **Pay now:** உடனே செலுத்துங்கள் (Udane Seluthungal) / தடவேகமாக செலுத்துங்கள் (Thadaavekamaga Seluthungal)
+*   **App:** ஆப் (App) / ஆப்பிளிகேஷன் (Application)",,,3,"The translation uses incorrect vocabulary for 'premium' (translating it as 'debt money' or keeping the English word) and includes a nonsensical 'Congrats' in the concise option, though the general meaning is partially conveyed.",823,61,0.085
+T17,test,translation,en-to-bengali,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,67,171,71,0.0473,0.0,0,0.0,0.0473,2934.8,0.0,0.0,2934.8,0,no,stop,,"**আমরা আপনার নেট ব্যাংকিং-এ একটি নতুন ডিভাইস থেকে লগইন লক্ষ্য করেছি। যদি এটি আপনি না হন, তবে অবিলম্বে ১৮০০-০০০-১২৩৪ নম্বরে কল করুন। কখনো কারোর সাথে আপনার ওটিপি (OTP) শেয়ার করবেন না।**",,,5,"Translation is accurate, natural in Bengali, preserves the phone number correctly, and includes the OTP abbreviation for clarity.",368,35,0.0409
+T18,test,translation,en-to-hindi,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,45,135,62,0.0369,0.0,0,0.0,0.0369,1859.3,0.0,0.0,1859.3,0,no,stop,,"**आपका अक्टूबर माह का खाता विवरण (अकाउंट स्टेटमेंट) तैयार है। आप इसे ऐप में 'Accounts' (खाते) सेक्शन में जाकर, फिर 'Statements' (विवरण) पर क्लिक करके डाउनलोड कर सकते हैं।**",,,4,"The translation is accurate and captures all details correctly. However, it unnecessarily retains English words ('Accounts', 'Statements') with translations in parentheses, whereas a standard Hindi translation would fully translate these terms (e.g., 'खाते' and 'विवरण/स्टेटमेंट').",317,69,0.0499
+T19,test,translation,en-to-kannada,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,54,273,39,0.0725,0.0,0,0.0,0.0725,31547.4,0.0,0.0,31547.4,0,no,stop,,"**Formal/Standard Kannada:**
+""ನಿಮ್ಮ ರೂ. 42,000/- ದಾವೆಯನ್ನು ಅನುಮೋದಿಸಲಾಗಿದೆ. 3 ಕೆಲಸದ ದಿನಗಳೊಳಗೆ ಮೊತ್ತ ನಿಮ್ಮ ಬ್ಯಾಂಕ് ಖಾತೆಗೆ జೇಮಾ ಮಾಡುವ intensa.""
+
+**Transliteration (for pronunciation):**
+""Nimma Ru. 42,000/- davaneyannu anumodisalagide. 3 kelasada dinagalolage moola nimma bank khategе jama maduva intense.""
+
+**Breakdown of key terms:**
+*   **Claim:** ದಾವೆ (Daave)
+*   **Approved:** ಅನುಮೋದಿಸಲಾಗಿದೆ (Anumodisalagide)
+*   **Credited:** ಜೇಮಾ ಮಾಡಲಾಗಿದೆ / ಓ atât ಮಾಡಲಾಗಿದೆ (Jama madalagide / Credit madalagide)
+*   **Working days:** ಕೆಲಸದ ದಿನಗಳು (Kelasada dinagalu)
+*   **Bank account:** ಬ್ಯಾಂಕು ಖಾತೆ (Banku khate)",,,2,"The Kannada translation contains serious errors, including untranslated English words ('intensa'), incorrect spelling, and grammatical mistakes, making it partially wrong and unusable.",515,44,0.0554
+T20,test,indic,hindi,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,93,148,144,0.0429,0.0,0,0.0,0.0429,2773.2,0.0,0.0,2773.2,0,no,stop,,billing,billing,yes,5,The answer correctly categorizes the complaint as a billing issue and follows the instruction to provide only the English category name.,300,35,0.0358
+T21,test,indic,hindi,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,77,144,38,0.041,0.0,0,0.0,0.041,4583.9,0.0,0.0,4583.9,0,no,stop,,आपकी असुविधा के लिए हमें खेद है; कृपया अपना क्लेम रेफ़रेंस नंबर और पंजीकृत मोबाइल नंबर साझा करें ताकि हम तुरंत जाँच शुरू कर सकें। हमारी टीम 24 घंटे के भीतर स्थिति की जाँच करके आपको अद्यतन करेगी। यदि आवश्यक हो तो आगे की कार्रवाई के लिए हम आपसे संपर्क करेंगे।,,,5,"The answer is polite, in Hindi, consists of exactly three sentences, acknowledges the delay, and clearly states the next steps (sharing details for immediate verification).",399,43,0.0463
+T22,test,indic,hindi,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,77,94,88,0.0283,0.0,0,0.0,0.0283,2536.8,0.0,0.0,2536.8,0,no,stop,,7850,7850,yes,5,"The answer correctly extracts the numerical value 7850 as instructed, matching the reference answer exactly.",287,33,0.0341
+T23,test,indic,hindi,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,56,340,216,0.0896,0.0,0,0.0,0.0896,6902.9,0.0,0.0,6902.9,0,no,stop,,"क्रेडिट स्कोर आपकी वित्तीय विश्वसनीयता का एक अंक होता है जो 300 से 900 के बीच होता है। यह बैंकों को बताता है कि आप कर्ज चुकाने में कितने भरोसेमंद हैं। इसे सुधारने के लिए समय पर EMI चुकाएं, क्रेडिट कार्ड का उपयोग कम रखें और पुराने खाते बंद न करें। नियमित रूप से अपनी क्रेडिट रिपोर्ट देखें और गलतियों को तुरंत ठीक करवाएं।",,,4,"The answer is factually correct and well-structured, but it slightly exceeds the constraint of four sentences (it has five sentences), making it noticeably incomplete regarding the negative constraint.",393,47,0.0473
+T24,test,indic,tamil,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,109,67,63,0.0232,0.0,0,0.0,0.0232,1786.1,0.0,0.0,1786.1,0,no,stop,,fraud,fraud,yes,5,"The answer correctly identifies the complaint as fraud based on the unauthorized transaction and lack of OTP sharing, matching the reference and required format.",316,38,0.0381
+T25,test,indic,tamil,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,91,141,35,0.041,0.0,0,0.0,0.041,6697.5,0.0,0.0,6697.5,0,no,stop,,"அன்புள்ள வாடிக்கையாளரே, உங்கள் வட்டி விகிதம் RBI-ன் விதிகள் மற்றும் சந்தை நிலைமைகளின் அடிப்படையில் மாறுபடுகிறது. வட்டி விகிதம் அதிகரித்தால், உங்கள் EMI அளவும் பேரולה மாற்றப்படும் என்பதை தெரிவித்துக் கொள்கிறோம். மேலும் விவரங்களுக்கும் உதவிக்கும் எங்கள் வங்கியைத் தொடர்பு கொள்ளவும்.",,,4,"The answer is polite, in Tamil, explains the reason for the rate increase and notes the EMI impact, but has minor grammar errors ('பேரகீடம்' should be 'உங்கள்' or similar context, and sentence flow is slightly awkward), and could be more specific about EMI adjustment options.",412,76,0.0597
+T26,test,indic,bengali,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,101,121,118,0.0365,0.0,0,0.0,0.0365,2807.6,0.0,0.0,2807.6,0,no,stop,,service,service,yes,5,"The classification is correct, matches the reference, and follows the instruction to output only the English category name.",301,33,0.0351
+T27,test,indic,bengali,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,60,232,21,0.0624,0.0,0,0.0,0.0624,6651.1,0.0,0.0,6651.1,0,no,stop,,"**টার্ম ইনস্যুরেন্স** হলো শুধু যাবতীয় জীবন বীমা—আপনি পলিসি মেয়াদে বাঁচে থাকলে কোনো টাকা ফেরত পাবেন না, শুধু মৃত্যু হলে nominee-কে টাকা মেলে।  
+**এন্ডাওমেন্ট পলিসি** হলো বীমা+বিনিয়োগের মিশ্রণ—মেয়াদ শেষে বাঁচে থাকলেও পরিপক্বতা মুল্য (Maturity Value) হিসেবে একমুস্ত টাকা ফেরত পান।  
+তাই টার্মের প্রিমিয়াম অনেক কম এবং শুধু ঝুঁকি কভারেজ দেয়, আর এন্ডাওমেন্টের প্রিমিয়াম বেশি কিন্তু সেটি ভবিষ্যতের জন্য সঞ্চয় ও আর্থিক নিরাপত্তা দুটোই দেয়।",,,4,"The answer is correct, concise (3 sentences), and written in simple Bengali. However, it largely transliterates English terms like 'nominee', 'Maturity Value', and uses the non-standard Bengali 'মেলে' instead of 'পাবেন', slightly reducing the 'simple Bengali' quality.",472,76,0.0642
+T28,test,indic,hinglish,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,58,1174,39,0.3019,0.0,0,0.0,0.3019,31621.6,0.0,0.0,31621.6,0,no,stop,,"**🚨 IMMEDIATE ACTION REQUIRED – FOLLOW EXACT ORDER 🚨**
+
+---
+
+### **STEP 1: COLLECT PROOF (2 MIN)**
+- Open your UPI app (GPay/PhonePe/Paytm/BHIM) → **Transaction History** → tap the ₹5,000 entry  
+- **Screenshot** everything:  
+  - UPI Ref No (12‑digit)  
+  - Date & Time  
+  - Receiver UPI ID / Name / VPA  
+  - Amount & Status “Success”  
+- Save **PDF/CSV** of statement if app allows.
+
+---
+
+### **STEP 2: CONTACT RECIPIENT DIRECTLY (IF KNOWN)**
+- If you recognise the UPI ID (friend/merchant), **call/message immediately** – ask them to **refund via same UPI** (they’ll get a “Collect Request” or can send back).  
+- **Do NOT share OTP/PIN** – only ask them to initiate a **reverse transfer**.
+
+---
+
+### **STEP 3: RAISE DISPUTE IN YOUR UPI APP (RIGHT NOW)**
+| App | Path |
+|-----|------|
+| **GPay** | Profile → Help & Feedback → “Raise a dispute” → Select transaction → “Wrong UPI ID” |
+| **PhonePe** | History → Transaction → “Raise Issue” → “Money sent to wrong account” |
+| **Paytm** | Passbook → Transaction → “Need Help?” → “Report an Issue” → “Wrong Transfer” |
+| **BHIM** | Menu → Complaints → “Raise Complaint” → Fill details |
+
+**Fill exactly:**  
+- UPI Ref No  
+- “Sent to wrong UPI ID by mistake”  
+- Attach screenshots from Step 1  
+- Submit → Note **Complaint/Reference ID**.
+
+---
+
+### **STEP 4: CALL YOUR BANK CUSTOMER CARE (PARALLEL)**
+- Dial **bank’s 24×7 helpline** (on back of debit card / website).  
+- Say: **“UPI wrong credit – need chargeback / reversal”**  
+- Give: UPI Ref No, Date, Amount, Your A/c No, Receiver VPA.  
+- Ask for **Bank Complaint ID** and **expected TAT** (usually 7‑10 working days).  
+- Request **email confirmation** of the complaint.
+
+---
+
+### **STEP 5: ESCALATE IF NO RESPONSE IN 48 HRS**
+1. **NPCI UPI Helpdesk** – email: **upihelp@npci.org.in**  
+   Subject: `URGENT: Wrong UPI Credit – Ref <Your UPI Ref No>`  
+   Body: Same details + screenshots + Bank Complaint ID.
+2. **Bank Nodal Officer / Grievance Redressal** – find on bank website → send same mail.
+3. **RBI CMS (Complaint Management System)** – https://cms.rbi.org.in → “File a Complaint” → select “Digital Payments”.
+
+---
+
+### **STEP 6: POLICE / CYBER CELL (OPTIONAL BUT STRONG)**
+- If amount > ₹50k or recipient unresponsive → file **online FIR** at **cybercrime.gov.in** (category: “Financial Fraud – UPI”).  
+- Keep **FIR copy** – banks/NPCI act faster with police reference.
+
+---
+
+## ⏱ QUICK CHECKLIST (COPY‑PASTE TO NOTES)
+
+```
+[ ] Screenshots + PDF statement saved
+[ ] Recipient contacted (if known)
+[ ] Dispute raised in UPI app → Complaint ID: __________
+[ ] Bank helpline called → Bank Complaint ID: __________
+[ ] Email sent to upihelp@npci.org.in + Bank Nodal Officer
+[ ] RBI CMS complaint filed (if >48 hrs no update)
+[ ] Cybercrime FIR filed (if needed)
+```
+
+---
+
+### **WHAT TO EXPECT**
+| Timeline | Action |
+|----------|--------|
+| **0‑24 h** | App dispute + bank call logged |
+| **2‑7 days** | Bank/NPCI investigate – may freeze receiver’s account |
+| **7‑14 days** | If genuine mistake & receiver has balance → **auto‑reversal** to your account |
+| **>14 days** | Escalate to RBI Ombudsman (https://rbi.org.in/ombudsman) |
+
+---
+
+### **⚠️ DO NOT**
+- Share OTP / MPIN / Card details with anyone “helping” you.  
+- Pay any “recovery fee” – **no legitimate agency asks for money**.  
+- Delete the transaction – you’ll lose proof.
+
+---
+
+**YOU’RE NOW COVERED END‑TO‑END.**  
+Keep the checklist handy, follow up daily, and you’ll most likely see the ₹5,000 back within **7‑10 working days**.  
+
+**Good luck – stay calm, act fast!** 🚀",,,4,"The answer is correctly written in Hinglish as requested and provides a comprehensive, generally correct step-by-step guide. However, it lacks the crucial legal disclaimer that funds sent to a wrong UPI ID are legally the recipient's property (unless coerced), meaning the bank cannot forcibly reverse a transaction to an active, identifiable account; the process relies heavily on the receiver's cooperation or a police FIR, which the answer suggests but does not emphasize as a primary legal barrier.",1346,106,0.1414
+T29,test,indic,hinglish,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,66,95,92,0.0279,0.0,0,0.0,0.0279,2043.8,0.0,0.0,2043.8,0,no,stop,,service,service,yes,5,"The answer correctly identifies the complaint as 'service' based on the pending address change request, matching the reference answer and instructions.",265,37,0.0339
+T30,test,doc_qa,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,185,78,72,0.0303,0.0,0,0.0,0.0303,2251.3,0.0,0.0,2251.3,0,no,stop,,4500,4500,yes,5,The answer correctly identifies the processing fee amount and follows the instruction to reply with the number only.,385,31,0.0407
+T31,test,doc_qa,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,184,68,64,0.0277,0.0,0,0.0,0.0277,1069.3,0.0,0.0,1069.3,0,no,stop,,36,36,yes,5,The answer correctly calculates 3 years as 36 months and follows the instruction to reply with the number only.,378,35,0.0417
+T32,test,doc_qa,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,147,105,99,0.035,0.0,0,0.0,0.035,1620.1,0.0,0.0,1620.1,0,no,stop,,2350,2350,yes,5,The answer correctly identifies the minimum amount due as 2350 and follows the instruction to reply with the number only.,349,37,0.0402
+T33,test,doc_qa,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,167,51,43,0.0224,0.0,0,0.0,0.0224,1264.2,0.0,0.0,1264.2,0,no,stop,,111380,111380,yes,5,"The answer correctly extracts the maturity amount as a number only, matching the reference answer exactly.",368,30,0.039
+T34,test,doc_qa,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,152,87,82,0.0307,0.0,0,0.0,0.0307,1343.3,0.0,0.0,1343.3,0,no,stop,,213,213,yes,5,The answer correctly calculates the remaining EMIs (240 - 27 = 213) and follows the instruction to reply with the number only.,357,45,0.0439
+T35,test,reasoning,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,135,1530,60,0.3968,0.0,0,0.0,0.3968,41430.2,0.0,0.0,41430.2,0,no,stop,,"**Recommendation: Plan B is the significantly better choice for your specific profile.**
+
+While Plan A is cheaper, Plan B provides the **adequate coverage amount, necessary policy duration, and critical illness protection** that your financial responsibilities (home loan + two young dependents) demand.
+
+---
+
+### 📊 Side-by-Side Comparison
+
+| Feature | **Plan A** | **Plan B** | **Winner** |
+| :--- | :--- | :--- | :--- |
+| **Sum Assured** | **₹1 Crore** | **₹1.5 Crore** | **Plan B** |
+| **Policy Term** | Until Age 60 (28 years) | Until Age 70 (38 years) | **Plan B** |
+| **Annual Premium** | ₹11,800 | ₹18,900 | Plan A (Cheaper) |
+| **Claim Settlement Ratio** | 97.2% | 98.6% | **Plan B** |
+| **Critical Illness Rider** | ❌ Not Included | ✅ Included | **Plan B** |
+| **Cost per ₹1 Cr Cover (Annual)** | ₹11,800 | ₹12,600 | Plan A (Marginally) |
+
+---
+
+### 🎯 Why Plan B Wins for *Your* Situation
+
+#### 1. The Coverage Amount (₹1.5 Cr vs ₹1 Cr) – **Critical Factor**
+*   **The Math:** Your current liabilities = **Home Loan (₹40L)** + **Children’s Future Education/Marriage (est. ₹60L–₹80L)** + **Income Replacement for Spouse (10–15x annual income)**.
+*   **Plan A (₹1 Cr):** After paying off the ₹40L home loan, only **₹60L remains**. This is insufficient to fund two children’s higher education *and* provide 10+ years of monthly expenses for your spouse.
+*   **Plan B (₹1.5 Cr):** Leaves **₹1.1 Cr** after the home loan. This allows for loan clearance + children’s goals + a corpus generating ~₹6–7 Lakh/year for household expenses (via SWP/FDs).
+
+#### 2. The Policy Term (Age 70 vs Age 60) – **Critical Factor**
+*   **Your Age:** 32. **Children's Age:** ""Young"" (assume 2–6 years old).
+*   **Plan A (Ends at 60):** Policy expires when you are 60. Your youngest child will be ~28–32. If you pass away at 61, **there is zero payout** right when your retirement corpus might be depleted or health costs rise.
+*   **Plan B (Ends at 70):** Covers you through your working years **and** the vulnerable early retirement phase (60–70). This aligns with the ""liability clearance"" timeline (loan paid off, kids settled).
+
+#### 3. Critical Illness (CI) Rider – **High Value Add**
+*   At 32, the probability of a critical illness (cancer, heart attack, stroke) before 60 is statistically significant.
+*   **Without Rider (Plan A):** A diagnosis drains savings *and* stops income. The term policy pays **only on death**.
+*   **With Rider (Plan B):** Pays a lump sum (usually ₹10L–₹50L depending on rider config) **on diagnosis**. This protects your *investments* and *home loan EMIs* from being liquidated during treatment/recovery.
+*   *Buying this rider separately later will be expensive or impossible if health deteriorates.*
+
+#### 4. Claim Settlement Ratio (98.6% vs 97.2%)
+*   Both are good (>95%), but 98.6% indicates slightly better underwriting discipline and claims philosophy. For a ₹1.5 Cr claim, that 1.4% difference in probability matters.
+
+#### 5. The ""Real"" Cost Difference is Negligible
+*   **Extra Premium:** ₹7,100/year (≈ **₹19/day**).
+*   **What you get for ₹19/day:** **+₹50 Lakh Coverage + 10 Extra Years of Cover + Critical Illness Payout.**
+*   The *cost per ₹1 Lakh of cover* is almost identical (Plan A: ₹11.8k/Cr vs Plan B: ₹12.6k/Cr). You are not paying a ""loading"" penalty; you are buying appropriately.
+
+---
+
+### ⚠️ The Danger of Choosing Plan A (Underinsurance Trap)
+If you choose Plan A to save ₹7,100/year:
+1.  **Gap at Age 60:** You become uninsurable/unaffordable to re-insure at 60.
+2.  **CI Risk:** A single critical illness at age 45 could wipe out the savings you *thought* you made by choosing the cheaper premium.
+3.  **Inflation:** ₹1 Cr today ≈ ₹35–40 Lakh in 20 years. Plan B’s ₹1.5 Cr offers a better hedge.
+
+---
+
+### ✅ Action Plan for Plan B
+1.  **Confirm CI Rider Sum Assured:** Ensure the Critical Illness cover is at least **₹25–30 Lakh** (often riders are capped at lower amounts than base cover).
+2.  **Opt for ""Regular Pay"" (not Limited Pay):** At 32, spreading premiums over the full term (38 years) keeps annual outflow low (₹18,900) and beats inflation.
+3.  **Add ""Waiver of Premium"" Rider:** If not built-in, add it. Future premiums waived if you suffer total permanent disability or critical illness.
+4.  **Married Women’s Property (MWP) Act:** **Mandate** the policy under MWP Act (Section 6). This ensures the payout goes *only* to your wife/children, protected from your creditors/relatives/legal heirs.
+5.  **Disclose Home Loan:** Mention the ₹40L loan in the proposal form. Some insurers offer ""Home Loan Protection"" variants or require assignment; standard term cover is better as the nominee decides allocation.
+
+### Final Verdict
+**Buy Plan B.** The ₹592/month difference is the price of ensuring your wife isn't left choosing between paying the home loan EMI and paying your children's school fees if you aren't there. Plan A is a ""tax-saving ticket""; Plan B is a ""financial safety net.""",,,4,"Solid recommendation of Plan B with correct reasoning for coverage amount, duration, and CI rider, but contains a minor calculation inconsistency regarding the annual premium difference (calls it Rs 7,100 vs Rs 592/month in different places) and the MWP Act legal point is slightly generalized (applies to self-insured women).",1802,85,0.1678
+T36,test,reasoning,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,67,559,130,0.146,0.0,0,0.0,0.146,7399.0,0.0,0.0,7399.0,0,no,stop,,"### **Formula**
+
+The standard formula for calculating EMI on a reducing balance basis is:
+
+$$EMI = \frac{P \times r \times (1+r)^n}{(1+r)^n - 1}$$
+
+**Where:**
+*   **$P$** = Principal Loan Amount
+*   **$r$** = Monthly Interest Rate (Annual Rate / 12 / 100)
+*   **$n$** = Loan Tenure in Months (Years $\times$ 12)
+
+---
+
+### **Calculation**
+
+**1. Identify the variables:**
+*   **Principal ($P$)** = ₹10,00,000
+*   **Annual Interest Rate** = 9%
+*   **Monthly Interest Rate ($r$)** = $\frac{9\%}{12} = 0.75\% = \mathbf{0.0075}$
+*   **Tenure ($n$)** = 5 years $\times$ 12 = **60 months**
+
+**2. Calculate $(1+r)^n$:**
+$$(1 + 0.0075)^{60} = (1.0075)^{60} \approx \mathbf{1.565681}$$
+
+**3. Apply the formula:**
+$$EMI = \frac{10,00,000 \times 0.0075 \times 1.565681}{1.565681 - 1}$$
+
+$$EMI = \frac{10,00,000 \times 0.0117426}{0.565681}$$
+
+$$EMI = \frac{11,742.61}{0.565681}$$
+
+$$EMI \approx 20,757.57$$
+
+---
+
+### **Final Answer**
+
+**Monthly EMI = ₹ 20,758** (Rounded to the nearest rupee)",20758,yes,5,"The answer correctly identifies the formula, calculates the parameters accurately, and arrives at the correct EMI of 20,758, matching the reference and task requirements perfectly.",727,48,0.0729
+T37,test,reasoning,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,145,1019,186,0.2674,0.0,0,0.0,0.2674,27983.7,0.0,0.0,27983.7,0,no,stop,,"She should choose **Option 1: Prepay the home loan**.
+
+Here is the step-by-step reasoning:
+
+### 1. Determine the *Marginal* Tax Benefit on Home Loan Interest
+This is the most critical factor.
+*   The customer **already claims the full ₹2 lakh deduction** under Section 24(b) (Old Regime).
+*   The current outstanding loan is ₹22 lakh @ 8.75%. The interest component for the first year will be approx **₹1.9 lakh**.
+*   Since she is already maxing out the ₹2 lakh limit, **any additional interest paid (or saved) provides zero tax benefit.**
+*   **Conclusion:** The effective cost of the loan for this marginal ₹3 lakh decision is the **full 8.75%** (no tax shield).
+
+### 2. Calculate Post-Tax Return on Option 2 (Fixed Deposit)
+*   FD Rate: **7.1%**
+*   Tax Bracket: **30%** (plus applicable surcharge/cess; assuming effective ~31.2%).
+*   Post-Tax Return = $7.1\% \times (1 - 0.312) \approx \mathbf{4.88\%}$.
+
+### 3. Compare ""Apples to Apples"": Guaranteed Return vs. Guaranteed Savings
+*   **Option 1 (Prepay):** Guaranteed, risk-free **saving of 8.75%** per annum on the ₹3 lakh used.
+*   **Option 2 (FD):** Guaranteed, risk-free **earning of ~4.88%** per annum on the ₹3 lakh invested.
+*   **Net Advantage:** Prepaying saves **~3.87% more per year** (8.75% - 4.88%).
+
+### 4. Quantitative Impact (First Year)
+*   **Interest Saved (Prepay):** ₹3,00,000 × 8.75% = **₹26,250**
+*   **FD Interest Earned (Post-Tax):** ₹3,00,000 × 4.88% ≈ **₹14,640**
+*   **Net Gain by Prepaying:** ₹26,250 - ₹14,640 = **₹11,610** in just the first year.
+
+### 5. Address the ""EMI Same"" Condition
+*   The prompt specifies ""keep the EMI the same.""
+*   This results in a **reduction of loan tenure** (approx. 2.5–3 years knocked off the 15-year schedule).
+*   The customer becomes debt-free significantly earlier, eliminating years of future EMIs (total savings run into lakhs).
+
+### 6. Liquidity & Risk Consideration
+*   **Liquidity:** The FD offers liquidity (with a small penalty for premature withdrawal). Prepaying locks the money into the house (illiquid).
+*   **Risk:** Both are effectively risk-free (Home loan prepay = guaranteed return; FD = DICGC insured up to ₹5L).
+*   **Verdict:** Unless the customer has **zero emergency fund** or anticipates an immediate large expense requiring this specific ₹3L, the mathematical advantage of prepaying (almost **double the post-tax yield**) vastly outweighs the liquidity benefit of a 1-year FD.
+
+---
+
+### Summary Recommendation
+**Prepay the home loan (Option 1).**
+Because the ₹2 lakh tax deduction limit is already exhausted, the loan costs a full **8.75%** post-tax, while the FD yields only **~4.88%** post-tax. Prepaying offers a guaranteed, risk-free arbitrage gain of nearly **3.9% per annum**.",,,5,"Correctly identifies that the full home loan interest deduction is already utilized, making the prepayment yield the full 8.75%, which significantly exceeds the post-tax FD yield of ~4.88%; reasoning is complete, accurate, and in the correct language.",1166,70,0.1142
+T38,test,reasoning,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,115,561,309,0.1492,0.0,0,0.0,0.1492,16641.9,0.0,0.0,16641.9,0,no,stop,,"**The closing balance shown (Rs 37,800) is incorrect.**
+
+Here is the verification:
+
+**1. Calculate Total Credits:**
+Rs 12,500 + Rs 3,750 = **Rs 16,250**
+
+**2. Calculate Total Debits:**
+Rs 9,800 + Rs 2,450 + Rs 15,000 = **Rs 27,250**
+
+**3. Calculate Correct Closing Balance:**
+> **Opening Balance** + **Total Credits** – **Total Debits**
+> = Rs 48,200 + Rs 16,250 – Rs 27,250
+> = Rs 64,450 – Rs 27,250
+> = **Rs 37,200**
+
+---
+
+**Conclusion:**
+The statement shows a closing balance of **Rs 37,800**, but the correct closing balance is **Rs 37,200**. There is a difference of **Rs 600** (the statement balance is Rs 600 too high).",37200,yes,5,"The calculations are correct (Credits: 16,250; Debits: 27,250; Closing: 37,200), matches the reference answer, and clearly explains the discrepancy.",574,59,0.0655
+T39,test,reasoning,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,98,799,198,0.2088,0.0,0,0.0,0.2088,12381.1,0.0,0.0,12381.1,0,no,stop,,"Here is the step-by-step calculation:
+
+### **Step 1: Apply the Deductible**
+The deductible is the first portion of the claim the insured must pay before the insurer contributes.
+*   **Claim Amount:** ₹ 1,80,000
+*   **Less: Deductible:** ₹ 20,000
+*   **Amount Remaining (Subject to Co-payment):** ₹ 1,60,000
+
+---
+
+### **Step 2: Calculate the Co-payment (Insured's Share)**
+The co-payment is 10% applied to the amount remaining *after* the deductible.
+*   **Amount Subject to Co-pay:** ₹ 1,60,000
+*   **Co-payment %:** 10%
+*   **Co-payment Amount (Paid by Insured):** ₹ 1,60,000 × 10% = **₹ 16,000**
+
+---
+
+### **Step 3: Calculate the Insurer's Share (Before Sum Insured Check)**
+This is the balance of the remaining amount after the insured pays their co-payment portion.
+*   **Amount Remaining (Post-Deductible):** ₹ 1,60,000
+*   **Less: Co-payment (Insured's Share):** ₹ 16,000
+*   **Insurer's Payable Amount:** ₹ 1,44,000
+
+---
+
+### **Step 4: Verify against Sum Insured**
+*   **Calculated Payable Amount:** ₹ 1,44,000
+*   **Sum Insured (Policy Limit):** ₹ 5,00,000
+*   **Check:** ₹ 1,44,000 < ₹ 5,00,000. The claim is well within the policy limit.
+
+---
+
+### **Final Answer**
+**The Insurer will pay: ₹ 1,44,000**
+
+***
+
+### **Summary of Payment Breakdown**
+| Component | Amount (₹) | Paid By |
+| :--- | :--- | :--- |
+| **Total Claim** | **1,80,000** | — |
+| Deductible | 20,000 | **Insured** |
+| Co-payment (10% of 1,60,000) | 16,000 | **Insured** |
+| **Insurer Payout** | **1,44,000** | **Insurer** |
+| **Total Out-of-Pocket (Insured)** | **36,000** | (20,000 + 16,000) |",144000,yes,5,"The answer correctly follows the calculation steps (deductible first, then co-payment), arrives at the correct final amount of Rs 1,44,000, and clearly presents the breakdown.",899,53,0.0877
+T40,test,reasoning,english,always_frontier,baseline: every prompt -> Nemotron 3 Ultra (NVIDIA),tier3,,,,,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,198,1371,59,0.3599,0.0,0,0.0,0.3599,39119.6,0.0,0.0,39119.6,0,no,stop,,"**Decision: YES, the bank should block the card immediately.**
+
+This is a textbook **Card-Present (CP) / Card-Not-Present (CNP) fraud pattern** involving a cloned physical card and compromised digital credentials. The velocity, geography, and behavioral deviations make legitimate use statistically impossible.
+
+---
+
+### Step-by-Step Pattern Analysis
+
+#### 1. Baseline Establishment (10:02 PM – Pune Fuel Station)
+*   **Transaction:** ₹1,200 at a fuel station in Pune (Card Present).
+*   **Analysis:** This fits the cardholder’s profile (Location: Pune, Amount: Low/Typical).
+*   **Fraud Indicator:** **The ""Test Transaction.""** Fraudsters almost always make a small, low-risk ""chip-and-pin"" or contactless purchase first to verify the *physical clone* works before attempting high-value theft. This confirms the attacker possesses a working physical counterfeit card.
+
+#### 2. Digital Credential Exploitation (10:09 PM & 10:11 PM – Electronics Website)
+*   **Transactions:** Two attempts of ₹49,999 at the same electronics site (CNP). First approved, second declined (Limit Exceeded).
+*   **Analysis:**
+    *   **Amount Structuring:** ₹49,999 is a deliberate attempt to bypass **₹50,000 velocity/authorization thresholds** common in Indian banking rules (often triggering additional OTP/2FA or manual review).
+    *   **Velocity:** 2 minutes after the fuel swipe. The cardholder cannot physically travel from a Pune fuel station to a desktop/mobile to place a high-value online order in 2 minutes.
+    *   **Channel Conflict:** **Simultaneous CP (Pune) + CNP (Online) usage.** This proves the PAN/CVV/Expiry (digital credentials) are compromised *separately* from the physical EMV chip data (or the fraudster has a sophisticated setup cloning both).
+    *   **Merchant Category:** Electronics = High resale value / Easy liquidation.
+
+#### 3. Geographic Impossibility (10:20 PM – Kolkata Jewellery Store)
+*   **Transaction:** ₹15,000 at a jewellery store in Kolkata (Card Present).
+*   **Analysis:** **The ""Smoking Gun.""**
+    *   **Distance:** Pune to Kolkata is ~1,600 km (2.5 hr flight, 24+ hr train/road).
+    *   **Time Delta:** 11 minutes after the Pune fuel transaction (10:09 → 10:20).
+    *   **Physical Impossibility:** The cardholder cannot be in Pune and Kolkata simultaneously.
+    *   **Merchant Category:** Jewellery = **High-risk MCC (5094/5944)**. Primary target for cash-out via gold/diamond purchase (instant liquidity, hard to trace).
+    *   **Conclusion:** A second physical clone (or the same one used by a mule) is active in Kolkata.
+
+#### 4. Credential Verification / Tokenization Attempt (10:27 PM – Intl Verification)
+*   **Transaction:** ₹2 International verification charge (Unknown Merchant).
+*   **Analysis:**
+    *   **Zero-Auth / $1-2 Auth:** Standard behavior for adding a card to a digital wallet (Apple Pay/Google Pay), saving it on a merchant portal (Amazon/Netflix), or testing validity on the dark web (""carding"" forums).
+    *   **International Routing:** Suggests the fraudster is testing if the card works on international rails (less stringent 3D Secure) or provisioning it into a tokenized wallet for future CNP use without OTP.
+    *   **Timing:** 7 minutes after Kolkata. The fraud ring is maximizing utility of the compromised data before the block hits.
+
+---
+
+### Summary of Risk Flags
+
+| Feature | Observation | Risk Level |
+| :--- | :--- | :--- |
+| **Geographic Velocity** | Pune → Kolkata in 18 mins (Physically Impossible) | **CRITICAL** |
+| **Channel Velocity** | CP (Pune) → CNP (Web) → CP (Kolkata) in 25 mins | **CRITICAL** |
+| **Amount Structuring** | ₹49,999 x 2 (Threshold Evasion) | **HIGH** |
+| **Merchant Risk** | Electronics (Resale) + Jewellery (Cash-out) | **HIGH** |
+| **Profile Deviation** | Monthly spend <₹10k vs ₹1.15L attempted in 25 mins | **HIGH** |
+| **Verification Charge** | Post-fraud tokenization/wallet provisioning | **MEDIUM** |
+
+---
+
+### Final Justification for Blocking
+
+**Do not wait for customer confirmation.** The ""Limit Exceeded"" decline at 10:11 PM saved the bank ~₹50k, but the ₹15k Kolkata transaction (10:20 PM) **was approved**. The physical card clone is active and liquidating assets *right now*.
+
+**Immediate Actions Required:**
+1.  **Hard Block (Hotlist):** Permanent block on the PAN. Do not use a ""temporary freeze""; the compromise is total (Chip + Magstripe + CNP credentials).
+2.  **Chargeback Initiation:** Immediate dispute for the Kolkata ₹15k (CP liability shift may apply if EMV was used, but liability depends on terminal capability; Jewellery stores often have legacy terminals).
+3.  **Re-issue:** Expedite new card with new PAN/CVV to customer's registered address.
+4.  **Fraud Ring Alert:** Flag the Kolkata jewellery terminal ID and the Electronics Website Merchant ID for network-level monitoring (Visa/Mastercard CAF/SAFE reporting).
+
+**Verdict:** This is not ""suspicious activity."" This is **confirmed, active, multi-channel fraud.** Block the card now.",,,5,"The analysis correctly identifies the critical fraud indicators (geographic impossibility, velocity, profile deviation) and provides a well-justified decision to block the card with comprehensive follow-up actions.",1686,49,0.1455
+P01,practice,classification,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,118,91,81,0.0034,0.0,0,0.0,0.0034,708.8,0.0,0.22,709.0,0,no,stop,,billing,billing,yes,5,"Answer is correct, complete, and matches the reference.",262,23,0.0284
+P02,practice,extraction,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,127,103,91,0.0038,0.0,0,0.0,0.0038,563.7,0.0,0.79,564.5,0,no,stop,,40072318,40072318,yes,5,The answer correctly extracts the loan account number as requested and matches the reference.,293,27,0.0323
+P03,practice,summary,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,291,140,26,0.012,0.0,0,0.0,0.012,546.3,0.0,0.68,547.0,0,no,stop,,"- **Customer's issue:** The customer’s newly requested cheque book, ordered three weeks ago, never arrived because the courier returned it due to an outdated address on file.  
+- **Agent’s action:** Verified the account, confirmed the dispatch and return, canceled the returned cheque book, and placed a new, free request to the updated address.  
+- **Next step:** The new cheque book will be dispatched within 5‑7 working days, and the customer will receive an SMS with the tracking number once it ships.",,,5,"The answer is correct, complete, and accurately summarizes the transcript in the requested format.",559,29,0.0531
+P04,practice,translation,en-to-hindi,router,"Indian language, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,94,86,23,0.0062,0.0,0,0.0,0.0062,599.3,0.0,0.23,599.5,0,no,stop,,आपके KYC दस्तावेज़ों की सत्यापन हो गया है। आपका सेविंग्स खाता अब पूरी तरह सक्रिय है।,,,5,"The translation is accurate, uses appropriate Hindi banking terminology (dastavez, sanyapan, saving, sakriya), and correctly conveys the meaning of the source message.",311,48,0.0415
+P05,practice,indic,hindi,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,136,101,90,0.0076,0.0,0,0.0,0.0076,678.3,0.0,0.33,678.6,0,no,stop,,fraud,fraud,yes,5,The answer correctly classifies the complaint about an unauthorized transfer as fraud and follows the instruction to provide only the category name in English.,297,38,0.0367
+P06,practice,indic,hinglish,router,"Code-mixed, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,code_mixed,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,101,533,151,0.0316,0.0,0,0.0,0.0316,1357.6,0.0,0.25,1357.8,0,no,stop,,"**ATM में कार्ड फँस गया? सिर्फ़ इन छोटे‑छोटे कदमों को फॉलो करें:**
+
+1. **शांत रहें और आसपास देखिए** – यदि कार्ड थोड़ा बाहर निकला हो तो हल्के से खींचने की कोशिश करें, लेकिन ज़्यादा बल न लगाएँ।  
+2. **ATM का स्थान लिखें/स्क्रीनशॉट ले** – बैंक को सटीक पता देना आसान होगा।  
+3. **रसीद/ट्रांज़ैक्शन स्लिप बचा कर रखें** – अगर मशीन ने रसीद निकाली हो तो उसे रख लें।  
+4. **तुरंत बैंक की हॉटलाइन कॉल करें**  
+   - अधिकांश बैंकों की 24‑घंटे हेल्पलाइन: **1800‑xxxx‑xxxx** (या अपने कार्ड के पीछे लिखी संख्या)।  
+   - “Card retained at ATM” बताएं और कार्ड ब्लॉक करवाएँ।  
+5. **बैंक को लिखित शिकायत (ई‑मेल/संदेश) भेजें** – ATM का लोकेशन, टाइम‑स्टैंप, और यदि संभव हो तो स्क्रीनशॉट/फ़ोटो संलग्न करें।  
+6. **नया डेबिट कार्ड माँगें** – ब्लॉक किए हुए कार्ड के बाद, नई कार्ड डिलीवरी या शाखा से पिक‑अप का विकल्प चुनें।  
+7. **यदि कोई पैसे निकाले नहीं गए तो** – बैलेंस की जाँच करें; अगर अनधिकृत निकासी हुई हो तो तुरंत फ़्रॉड रिपोर्ट डालें।  
+
+**याद रखें:** कार्ड को पुनः प्राप्त करने की कोशिश में ज़्यादा दबाव न डालें; सुरक्षा के लिए बैंक को तुरंत सूचित करना ही सबसे बेहतर कदम है।",,,5,"The answer provides correct, complete, and actionable steps for a stuck ATM card in Roman Hindi, matching the user's language preference.",729,38,0.0693
+P07,practice,indic,tamil,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,107,505,74,0.0301,0.0,0,0.0,0.0301,1578.8,0.0,0.11,1578.9,0,no,stop,,"உங்கள் கிரெடிட் கார்டின் பில் தொகையை அறிய இரண்டு எளிய வழிகள் இதோ:
+
+1. **ஆன்‌லைன் பேங்கிங் / மொபைல் ஆப்**  
+   - உங்கள் வங்கியின் இணைய‑வங்கியில் (நிர்வாகம்) அல்லது மொபைல் ஆப்பில் உள்நுழையவும்.  
+   - “கிரெடிட் கார்டு” அல்லது “கார்டு ஸ்டேட்ட்மென்ட்” பிரிவைத் தேர்வு செய்து, சமீபத்திய பில் விவரங்கள், இருப்பு, மற்றும் கடைசி கட்டண தேதியை பார்க்கலாம்.  
+   - பல வங்கிகள் “நேரடி பில்” (real‑time) தகவலை வழங்குவதால், உடனுக்குடன் தொகையைக் காணலாம்.
+
+2. **கார்டு வழங்குநர் (Issuer) ஐ தொடர்பு கொள்ளுதல்**  
+   - **விரைவு அழைப்பு (IVR) / தொலைபேசி:** கார்டின் பின்புறம் அச்சிடப்பட்டுள்ள வாடிக்கையாளர் சேவை எண்ணுக்கு அழைத்து, “கிரெடிட் கார்டு பில் தொகை” என்று கூறவும்; தானியங்கி அமைப்பு அல்லது ஒழுங்குபடுத்தப்பட்ட பிரதிநிதி உங்கள் தற்போதைய பில் விவரங்களைச் சொல்வார்.  
+   - **எஸ்எம்எஸ் / வாட்ஸ்அப்:** பல வங்கிகள் “SMS Bill Alert” அல்லது “WhatsApp Banking” சேவைகளை வழங்குகின்றன; உங்கள் பதிவு செய்யப்பட்ட மொபைல் எண்ணில் “BAL” அல்லது “BILL” போன்ற குறுக்கெழுத்தை அனுப்பினால், பில் தொகை எளிதாக கிடைக்கிறது.  
+
+இந்த இரண்டு முறைகளில் எதையாவது பயன்படுத்தி, உங்கள் கிரெடிட் கார்டின் பில் தொகையையும் கடைசிக் கட்டண தேதியையும் விரைவாக அறியலாம்.",,,5,"The answer correctly provides two distinct methods (digital banking and customer support channels) in the requested Tamil language, addressing the user's query accurately and completely.",784,42,0.0749
+P08,practice,doc_qa,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,164,51,41,0.0052,0.0,0,0.0,0.0052,616.9,0.0,0.54,617.4,0,no,stop,,48,48,yes,5,The answer correctly identifies the tenure as 48 months and provides only the number as requested.,319,31,0.0357
+P09,practice,reasoning,english,router,"English, complex (rules) -> Nemotron 3 Ultra (NVIDIA)",tier3,rules,english,complex,1.0,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,76,943,66,0.2441,0.0,0,0.0,0.2441,15303.3,0.0,0.13,15303.4,0,no,stop,,"Here are the calculations for both options.
+
+### **Given Data**
+*   **Principal (P):** ₹ 2,00,000
+*   **Time (T):** 1 Year
+
+---
+
+### **Option A: Simple Interest @ 7.0% p.a.**
+
+**Formula:**
+$$A = P(1 + RT)$$
+*(Where $R$ is the annual rate in decimal form)*
+
+**Calculation:**
+*   $R = 7.0\% = 0.07$
+*   $T = 1$
+
+$$A = 2,00,000 \times (1 + 0.07 \times 1)$$
+$$A = 2,00,000 \times 1.07$$
+$$A = \textbf{₹ 2,14,000}$$
+
+**Interest Earned:** ₹ 14,000
+
+---
+
+### **Option B: Compound Interest @ 6.8% p.a. compounded Quarterly**
+
+**Formula:**
+$$A = P \left(1 + \frac{r}{n}\right)^{nt}$$
+*   $r = 6.8\% = 0.068$ (Annual nominal rate)
+*   $n = 4$ (Compounding periods per year: Quarterly)
+*   $t = 1$ (Time in years)
+
+**Calculation:**
+1.  **Periodic Rate:** $\frac{0.068}{4} = 0.017$ (1.7% per quarter)
+2.  **Total Periods:** $4 \times 1 = 4$ quarters
+
+$$A = 2,00,000 \times (1 + 0.017)^4$$
+$$A = 2,00,000 \times (1.017)^4$$
+
+Calculating $(1.017)^4$:
+*   $1.017^2 = 1.034289$
+*   $1.034289^2 \approx 1.0697537$
+
+$$A = 2,00,000 \times 1.0697537$$
+$$A \approx \textbf{₹ 2,13,950.75}$$
+
+**Interest Earned:** ₹ 13,950.75
+
+---
+
+### **Comparison & Recommendation**
+
+| Feature | Option A (Simple Interest) | Option B (Compounded Quarterly) |
+| :--- | :--- | :--- |
+| **Nominal Rate** | 7.00% | 6.80% |
+| **Effective Annual Yield** | 7.00% | ~6.975% |
+| **Maturity Amount** | **₹ 2,14,000.00** | ₹ 2,13,950.75 |
+| **Total Interest** | **₹ 14,000.00** | ₹ 13,950.75 |
+| **Difference** | **+ ₹ 49.25 higher** | Lower |
+
+### **Recommendation: Choose Option A.**
+
+**Reasoning:**
+Although Option B offers the benefit of quarterly compounding (interest on interest), the nominal rate (6.8%) is sufficiently lower than Option A's rate (7.0%) that the compounding effect does not bridge the gap.
+
+*   **Option A yields an Effective Annual Rate of 7.00%.**
+*   **Option B yields an Effective Annual Rate of approx. 6.975%** $\left( (1 + \frac{0.068}{4})^4 - 1 \right)$.
+
+**Option A provides a higher maturity value by ₹ 49.25.** Unless there are additional factors not mentioned (like tax deduction timing differences, senior citizen benefits, or liquidity needs), purely on the basis of maturity value, **Option A is the better financial choice.**",214000,yes,5,"Calculations for both options are correct, all steps are shown, and the recommendation is accurate and justified.",1194,33,0.1024
+P10,practice,indic,bengali,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,104,1062,149,0.0615,0.0,0,0.0,0.0615,2451.0,0.0,0.18,2451.2,0,no,stop,,"**ফিক্সড ডিপোজিট (FD) মেয়াদ শেষের আগে ভাঙলে—যা ""প্রি-ম্যাচার রিডেম্পশন"" নামেও পরিচিত—সাধারণত ব্যাংকগুলো দুই‑ধরনের শর্ত আরোপ করে:**
+
+| শর্ত | কী ঘটে |
+|------|----------|
+| **সুদে কাটছাঁট (Interest Penalty)** | মেয়াদ শেষের আগে টাকা তুললে ব্যাংক সাধারণত পুরো সুদের হার না দিয়ে **কম সুদের হার** প্রয়োগ করে। উদাহরণস্বরূপ, ১‑বছরের FD-তে ৬% সুদ হলে, ৩ মাস আগে তুললে ৩%‑এর বদলে ২.৫%‑এর কাছাকাছি হার দেওয়া হতে পারে। |
+| **প্রশাসনিক ফি (Premature Withdrawal Fee)** | কিছু ব্যাংক নির্দিষ্ট **ফ্ল্যাট ফি** (যেমন ₹৫০০/৳৫০০) অথবা **ডিপোজিটের ১‑২%** (সর্বোচ্চ সীমা নির্ধারিত) চার্জ করে। তবে বড় শহরের বেশিরভাগ বেসিক ব্যাংকে এই ফি বেশ কম বা কখনোই নেই; মূল শাস্তি থাকে সুদের হ্রাসে। |
+
+### সংক্ষেপে কী‑কী গুরুত্বপূর্ণ
+
+1. **সুদ হার হ্রাস** – মেয়াদ শেষের আগে তুললে পুরো মেয়াদের সুদ না দিয়ে, **নিম্নতর হারে** (বা কখনো কখনো **ডিপোজিটের বাস্তব সময়ের ভিত্তিতে**) সুদ দেওয়া হয়।  
+2. **ফি** – সব ব্যাংকে না, তবে কিছু ব্যাংক **প্রি-ম্যাচার ফি** (প্রায় ১‑২% অথবা নির্দিষ্ট টাকার ফি) ধার্য করে।  
+3. **সর্বোচ্চ ক্ষতি** – প্রায় **মোট সুদের ১‑২%** (বা প্রি‑ম্যাচার ফি) আপনার মূল ডিপোজিটে হ্রাস পায়।  
+4. **বিবেচনা** –  
+   - যদি জরুরি টাকা দরকার হয়, **সাব-সিডি (সাবসিডিয়ারি ডিপোজিট) বা রিকরডিং FD** ব্যবহার করতে পারেন, যেগুলোতে প্রি‑ম্যাচার ফি কম থাকে।  
+   - কিছু ব্যাংক **“বিনামূল্যে প্রি-ম্যাচার”** অফার করে, তবে শর্তে “নূন্যতম ডিপোজিট ১ লক্ষ টাকার উপরে” বা “সুবিধা সীমিত” থাকতে পারে।  
+
+### উদাহরণ (ইন্ডিয়া/বাংলাদেশের সাধারণ প্র্যাকটিস)
+
+- **ব্যালেন্স ১০ লাখ টাকা, ১ বছরের FD, ৬% বার্ষিক সুদ**  
+  - মেয়াদে শেষ হলে সুদ = ₹৬,০০০ (বা ৳৬,০০০)।  
+  - ৬ মাস পরে টাকার প্রয়োজন → **প্রি‑ম্যাচার**: সুদ হ্রাস করে ৪% (বা ৪.৫%) → প্রাপ্ত সুদ = ₹৩,০০০ (বা ৪.৫% হলে ₹৩,৩৫০)।  
+  - যদি ফি ১% ধার্য হয় → অতিরিক্ত ₹১,০০০ কাটে।  
+  - মোট ক্ষতি ≈ **সুদের ২‑৩% + ফি**।
+
+### সংক্ষেপে উত্তর
+
+> **হ্যাঁ, মেয়াদ শেষের আগে FD ভাঙলে সাধারণত সুদের হার কমে যায় এবং কিছু ব্যাংকে ছোট ফি আরোপ করা হতে পারে।** ফলে আপনার মোট রিটার্নে প্রায় **১‑৩%** (সুদের হ্রাস + ফি) ক্ষতি হয়। যদি জরুরি টাকা দরকার না হয়, মেয়াদ পর্যন্ত রেখে উচ্চ সুদ উপভোগ করাই বেশি লাভজনক।  
+
+*(নির্দিষ্ট শর্তের জন্য আপনার ব্যাংকের শাখা/ওয়েবসাইটে “Premature Withdrawal Policy” দেখুন; কিছু ব্যাংকে “No Penalty” অপশনও থাকে।)*",,,5,"The answer is correct, complete, and written in the requested Bengali language with appropriate terminology for the Indian/Bangladeshi banking context.",1375,41,0.1191
+T01,test,classification,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,115,102,91,0.0037,0.0,0,0.0,0.0037,698.5,0.0,0.26,698.8,0,yes,stop,,fraud,fraud,yes,5,The answer identifies the correct category and follows the instruction to reply with the category only.,260,29,0.0305
+T02,test,classification,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,116,109,99,0.0039,0.0,0,0.0,0.0039,579.1,0.0,0.13,579.2,0,yes,stop,,service,service,yes,5,"The answer correctly identifies the category as 'service' based on the context of branch closure and lack of information regarding passbook updates, matching the reference answer.",260,43,0.0358
+T03,test,classification,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,110,48,38,0.0021,0.0,0,0.0,0.0021,653.6,0.0,0.09,653.7,0,yes,stop,,billing,billing,yes,5,"The answer correctly identifies the category as billing, matching the reference answer and adhering to the format constraints.",255,33,0.0317
+T04,test,extraction,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,119,75,64,0.003,0.0,0,0.0,0.003,651.3,0.0,0.09,651.4,0,yes,stop,,18750,18750,yes,5,The extracted number is correct and matches the required format.,279,23,0.0297
+T05,test,extraction,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,117,117,101,0.0041,0.0,0,0.0,0.0041,650.6,0.0,0.08,650.7,0,yes,stop,,SL-2207-88413,SL-2207-88413,yes,5,The answer correctly extracts the policy number exactly as requested and matches the reference answer.,292,28,0.0326
+T06,test,classification,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,122,49,38,0.0022,0.0,0,0.0,0.0022,549.1,0.0,0.13,549.2,0,yes,stop,,card_block,card_block,yes,5,The answer correctly identifies the intent as 'card_block' and follows the instruction to reply with the label only.,268,34,0.033
+T07,test,classification,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,107,37,27,0.0018,0.0,0,0.0,0.0018,295.2,0.0,0.1,295.3,0,yes,stop,,Positive,positive,yes,5,Correctly identifies the sentiment as positive and follows the one-word constraint.,250,26,0.0286
+T08,test,extraction,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,119,655,640,0.0194,0.0,0,0.0,0.0194,2134.2,0.0,0.09,2134.3,0,yes,stop,,KVRB0001234,KVRB0001234,yes,5,Correctly extracted the IFSC code and followed the instruction to reply with the code only.,293,30,0.0334
+T09,test,summary,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,456,147,26,0.0148,0.0,0,0.0,0.0148,961.9,0.0,1.3,963.2,0,no,stop,,"- **Customer issue:** A duplicate Rs 24,999 charge appears on the credit‑card statement for a single mobile‑phone purchase made online.  
+- **Agent action:** Verified the customer, opened a dispute for the second charge (reference DSP‑558201), placed a temporary credit of Rs 24,999 on the card, and explained the dispute timeline.  
+- **Next step:** Customer must email the order confirmation (showing only one order) to the bank’s disputes team, as instructed via an SMS that will be sent shortly.",,,5,"The summary is correct, complete, and follows the requested format with all key details accurately captured.",770,31,0.0697
+T10,test,summary,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,447,198,26,0.0175,0.0,0,0.0,0.0175,1051.0,0.0,4.21,1055.2,0,no,stop,,"- **Customer’s issue:** Wants to close her personal loan early after receiving a bonus and needs to know the payoff amount and how to stop the upcoming auto‑debit.  
+- **Agent’s actions:** Verified the loan details, calculated the total foreclosure amount (outstanding principal + 2% charge + GST +  accrued interest), explained why the 2% fee applies, offered to email the relevant clause, prepared a foreclosure letter, placed a hold on the December auto‑debit, and outlined the payment process.  
+- **Next step:** Agent will email the foreclosure letter (valid for 7 days) with payment instructions; the customer will make the payment via net banking, after which Navodaya Finance will issue a no‑dues certificate within 10 working days.",,,5,"The summary is accurate, covers all requested points (issue, actions, next step), and uses the correct language and format.",805,37,0.0746
+T11,test,summary,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,408,190,30,0.0165,0.0,0,0.0,0.0165,957.3,0.0,2.6,959.9,0,no,stop,,"- **Customer's issue:** The hospital’s cashless pre‑authorization for the father’s knee replacement surgery is on hold because the required doctor’s notes have not been received, jeopardizing approval before the scheduled surgery tomorrow.
+
+- **Agent’s actions:** Verified the policy, identified the missing documentation and the three‑year waiting‑period rule, marked the request as urgent, and promised to send an SMS with the request number and call back with an update by 7 pm.
+
+- **Next step:** The customer will visit the hospital’s insurance desk to upload the doctor’s notes within the next two hours; the insurer will review them and provide a decision that evening, with a fallback option to pay and claim reimbursement if approval isn’t obtained in time.",,,5,"The answer correctly identifies the issue, agent actions, and next steps with full completeness and appropriate language.",741,32,0.0679
+T12,test,summary,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,437,269,125,0.0214,0.0,0,0.0,0.0214,2080.7,0.0,2.63,2083.3,0,no,stop,,"- **Customer issue:** The video KYC for a new savings account kept failing with a “session expired” message when the app tried to scan the PAN card.  
+- **Agent action:** Reviewed the failed attempts, identified a camera‑permission problem, walked the customer through changing the permission to “Allow while using the app,” stayed on the line while the customer retried, and confirmed the KYC now succeeded.  
+- **Next step:** The account will be activated within 24 hours and the customer will receive an SMS with the new account number (if any further issues arise, they can book a fixed‑time video KYC slot or visit a branch).",,,5,"The answer is accurate, captures all key details (issue, specific fix, resolution, and next steps) concisely in the requested three-bullet format.",747,44,0.0729
+T13,test,summary,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,431,173,28,0.0159,0.0,0,0.0,0.0159,921.2,0.0,2.36,923.6,0,no,stop,,"- **Customer’s issue:** A ₹6,200 UPI payment to a grocery shop failed five days ago; the amount was debited from the customer’s account but has not been reversed yet.  
+- **Agent’s action:** Verified the transaction, explained the “pending reversal” status, raised a fast‑track complaint (UPI‑77341) to expedite the reversal, and informed the customer about RBI compensation for the delay.  
+- **Next step:** The reversal (and any compensation) should be credited within 2 working days; if the funds are not received by Friday, the customer should call back with the complaint number to have the issue escalated.",,,5,"The summary is accurate, complete, and correctly formatted in three bullet points as requested.",758,29,0.068
+T14,test,summary,english,router,"English, complex (rules) -> Nemotron 3 Ultra (NVIDIA)",tier3,rules,english,complex,1.0,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,393,382,208,0.1194,0.0,0,0.0,0.1194,13048.0,0.0,2.69,13050.7,0,yes,stop,,"*   **Customer's issue:** The customer received notice that their floating-rate home loan interest rate is increasing from 8.4% to 8.9% due to a repo rate hike and is concerned about the financial impact despite having a clean repayment history.
+*   **Agent's actions:** Explained the rate change is policy-driven (repo-linked) and not performance-based; outlined the default option (extending tenure by ~10 months) plus two alternatives—increasing the EMI to retain the original end date or making a part-prepayment (with no charges)—and confirmed the 20 December deadline to request an EMI increase.
+*   **Next step:** The agent will email a comparison calculation of the ""extended tenure"" vs. ""increased EMI"" options to the customer’s registered email address today for discussion with their spouse.",,,5,"The summary accurately captures the customer's issue, the agent's explanation and options provided, and the agreed next step to email the calculations, all in the correct language.",785,45,0.0761
+T15,test,translation,en-to-marathi,router,"Indian language, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,114,97,33,0.0071,0.0,0,0.0,0.0071,501.3,0.0,0.58,501.9,0,no,stop,,"प्रिय ग्राहक, आपले दोन-चाकी कर्जाचे EMI रक्कम ₹ 3,200 ५ डिसेंबर रोजी देय आहे. कृपया उशीर शुल्क टाळण्यासाठी आपल्या खात्यात पुरेशी शिल्लक ठेवावी.",,,4,"Translation is accurate and complete, but uses Devanagari instead of the standard Marathi Roman script expected for SMS.",338,36,0.039
+T16,test,translation,en-to-tamil,router,"Indian language, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,110,98,31,0.0071,0.0,0,0.0,0.0071,664.1,0.0,0.22,664.3,0,no,stop,,"உங்கள் வாழ்க்கை காப்பீட்டு கொள்கை, ரூ. 11,500 தொகை செலுத்தப்படாதால், 20 டிசம்பர் அன்று காலாவதியாகும். உடனே **Shubh Life** பயன்பாட்டை பயன்படுத்தி பணத்தை செலுத்துங்கள்.",,,3,"Tamil script and tone are correct, but the translation is grammatically broken and misspells key words (e.g., 'காப்பீட்டை' for 'காப்பீட்டு', 'காலாவதியாகும்' for 'காலாவதியாகும்', 'செலுத்தப்படாதால்' for 'செலுத்தப்படவில்லை என்றால்'), making the message unclear.",341,100,0.0634
+T17,test,translation,en-to-bengali,router,"Indian language, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,115,127,47,0.0088,0.0,0,0.0,0.0088,613.0,0.0,0.55,613.5,0,no,stop,,"**Bengali Translation:**
+
+> আমরা লক্ষ্য করেছি যে আপনার নেট ব্যাংকিং-এ একটি নতুন ডিভাইস থেকে লগইন হয়েছে। যদি এটি আপনি না হন, তাহলে অবিলম্বে 1800-000-1234 নম্বরে কল করুন। কখনও আপনার OTP অন্য কারো সঙ্গে শেয়ার করবেন না।",,,5,"The translation is accurate, complete, uses appropriate Bengali script, and conveys the urgent security message clearly.",361,34,0.04
+T18,test,translation,en-to-hindi,router,"Indian language, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,99,68,20,0.0052,0.0,0,0.0,0.0052,650.5,0.0,0.5,651.0,0,no,stop,,आपका अक्टूबर महीने का खाता विवरण तैयार है। आप इसे ऐप में **Accounts** (खाते) के तहत **Statements** (बयान) सेक्शन से डाउनलोड कर सकते हैं।,,,4,"The translation is accurate and complete, but retaining English terms like 'Accounts' and 'Statements' in italics/additions inside a Hindi script context is often considered less ideal for a natural full Hindi translation, though acceptable for UI clarity.",299,59,0.0448
+T19,test,translation,en-to-kannada,router,"Indian language, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,105,115,65,0.008,0.0,0,0.0,0.008,550.6,0.0,0.51,551.1,0,no,stop,,"ನಿಮ್ಮ ₹ 42,000 ದಾವೆ ಅನುಮೋದಿಸಲಾಗಿದೆ. ಈ ಮೊತ್ತವನ್ನು ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ 3 ಕಾರ್ಯದಿನಗಳ ಒಳಗೆ ಜಮಾ ಮಾಡಲಾಗುವುದು.",,,5,"The translation is accurate, natural, and uses the correct Kannada script and formatting (including the Rupee symbol).",319,35,0.0372
+T20,test,indic,hindi,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,138,82,72,0.0066,0.0,0,0.0,0.0066,760.1,0.0,0.46,760.6,0,no,stop,,billing,billing,yes,5,The answer correctly categorizes the complaint as a billing issue and follows the instruction to provide only the English category name.,300,35,0.0358
+T21,test,indic,hindi,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,123,161,50,0.0108,0.0,0,0.0,0.0108,671.5,0.0,0.18,671.7,0,no,stop,,"आदरणीय ग्राहक जी, आपके बीमा क्लेम की राशि अभी तक प्राप्त न होने के लिए हम क्षमा चाहते हैं। कृपया हमें अपने क्लेम संख्या और पॉलिसी विवरण ईमेल (claims@bank.com) या हमारे कस्टमर केयर नंबर 1800‑123‑456 पर भेजें, जिससे हम तुरंत जांच शुरू कर सकें। हमारी टीम 24 घंटे के भीतर स्थिति की पुष्टि कर आपको आवश्यक अपडेट और आगे की प्रक्रिया के बारे में सूचित करेगी।",,,5,"The response is polite, in Hindi, exactly three sentences long, and includes a clear next step as requested.",434,34,0.0455
+T22,test,indic,hindi,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,120,126,115,0.0088,0.0,0,0.0,0.0088,539.5,0.0,0.5,540.0,0,no,stop,,7850,7850,yes,5,"The answer correctly extracts the numerical value 7850 as instructed, matching the reference answer exactly.",287,33,0.0341
+T23,test,indic,hindi,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,108,204,57,0.0131,0.0,0,0.0,0.0131,1045.1,0.0,0.15,1045.2,0,no,stop,,"क्रेडिट स्कोर आपका वित्तीय भरोसेमंदता का अंक है, जो यह दिखाता है कि आप पिछले ऋणों और बिलों को समय पर चुका पाए हैं या नहीं। इसे बेहतर बनाने के लिए (1) समय पर सभी बिल और EMI का भुगतान करें, (2) क्रेडिट कार्ड या लोन का अधिकतम उपयोग नहीं करें (उपयोग 30 % से कम रखें), (3) अनावश्यक नई क्रेडिट लाइन्स नहीं खोलें, और (4) पुरानी, बिना उपयोग वाली क्रेडिट खातों को बंद न करें। इन आदतों से आपका स्कोर धीरे‑धीरे बढ़ेगा।",,,2,The answer violates the strict constraint of 'not more than four sentences' by containing 6 sentences.,441,32,0.0453
+T24,test,indic,tamil,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,141,58,47,0.0053,0.0,0,0.0,0.0053,586.0,0.0,0.2,586.2,0,no,stop,,fraud,fraud,yes,5,"The answer correctly identifies the complaint as fraud based on the unauthorized transaction and lack of OTP sharing, matching the reference and required format.",316,38,0.0381
+T25,test,indic,tamil,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,135,298,102,0.0188,0.0,0,0.0,0.0188,922.3,0.0,0.1,922.4,0,no,stop,,"வங்கியின் வீட்டுக் கடனின் வட்டி விகிதம், மைய வங்கி (RBI) விதித்த முக்கிய வட்டி விகிதம், சந்தை நிலைமைகள் மற்றும் நிதி செலவுகள் ஆகியவற்றின் மாற்றங்களால் மாறக்கூடும். உங்கள் கடன் மாறும் வட்டி விகிதக் (Floating) கடனாக இருந்தால், வட்டி விகிதம் உயர்ந்தால் EMI-யும் அதிகரிக்கும்; ஆனால் நிர்ணயிக்கப்பட்ட வட்டி விகிதக் (Fixed) கடனாக இருந்தால், தற்போதைய வட்டி விகிதம் நிலைத்திருக்கும் வரை EMI மாறாது. மேலும் விரிவான தகவலுக்கு, உங்கள் தனிப்பட்ட கணக்கு மேலாளர் அல்லது வாடிக்கையாளர் சேவையினரைக் தொடர்பு கொண்டு, குறிப்பாக உங்கள் கடனின் வட்டி வகை மற்றும் புதிய EMI கணக்கை அறியலாம்.",,,5,"The answer is in the correct language (Tamil), contains exactly three sentences as requested, is polite, and accurately explains the factors influencing interest rates and the impact on EMI for both floating and fixed rate loans.",549,55,0.0621
+T26,test,indic,bengali,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,141,115,105,0.0085,0.0,0,0.0,0.0085,757.8,0.0,0.13,757.9,0,no,stop,,service,service,yes,5,"The classification is correct, matches the reference, and follows the instruction to output only the English category name.",301,33,0.0351
+T27,test,indic,bengali,router,"Indian language, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,indian_language,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,108,274,77,0.017,0.0,0,0.0,0.017,957.7,0.0,0.23,957.9,0,no,stop,,"টার্ম ইনস্যুরেন্স হল একটি নির্দিষ্ট সময়ের জন্য কভারেজ দেয়; যদি সেই সময়ের মধ্যে বীমিত ব্যক্তি মারা যান, তবে বীমা কোম্পানি বীমা রাশি পরিবারকে দেয়, আর পলিসা মেয়াদ শেষ হলে কোনো টাকা ফেরত না।  
+এন্ডাওমেন্ট পলিসিতে বীমা রাশি এবং সঞ্চয় দুটোই থাকে; পলিসি মেয়াদ শেষ হলে বীমিতকে সঞ্চিত অর্থ ও বোনাসসহ পুরো পরিমাণ পাওয়া যায়, এবং যদি বীমিত আগে মারা যান তবে সওদা রাশি পরিবারকে প্রদান করা হয়।  
+সুতরাং, টার্ম ইনস্যুরেন্স মূলত শুধুমাত্র মৃত্যুর রক্ষা করে আর এন্ডাওমেন্ট পলিসি সুরক্ষা ও সঞ্চয় দুটোই একসাথে প্রদান করে।",,,2,"While the content and length are correct and in the requested language, the text contains severe spelling errors (e.g., 'ইনস্যুরেন্স' instead of 'ইন্স্যুরেন্স', 'সওদা' instead of 'সুদ' or 'ভুগতি', 'পরিবার' misspelled in places) which disrupts readability significantly.",496,90,0.0713
+T28,test,indic,hinglish,router,"Code-mixed, complex (rules) -> gpt-oss-120b (Groq)",tier2,rules,code_mixed,complex,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,110,1711,161,0.0983,0.0,0,0.0,0.0983,4034.7,0.0,0.24,4034.9,0,no,stop,,"**गलत UPI आईडी पर भेजे गये ₹5,000 को वापस पाने के लिये आप नीचे दिए गए चरण‑बद्ध तरीके को फ़ॉलो कर सकते हैं।**  
+
+---
+
+## 1️⃣ तुरंत अपनी ऐप में “Transaction History” खोलें
+1. **अपनी UPI ऐप (PhonePe, Google Pay, Paytm, BHIM, आदि) खोलें।**  
+2. “**Recent Transactions / History**” पर जाएँ।  
+3. उस **₹5,000 के लेन‑देन को ढूँढें** (ट्रांज़ैक्शन आईडी, तारीख‑समय, रिसीवर का नाम/वर्चुअल पेमेंट एड्रेस देख लें)।  
+
+---
+
+## 2️⃣ लेन‑देन की स्थिति जांचें
+- **If the status shows “Pending / In Process”** – यह अभी पूरी तरह से क्लियर नहीं हुआ है, और कुछ ही मिनटों में रिवर्स हो सकता है।  
+- **If the status shows “Successful / Completed”** – पैसा रिसीवर के खाते में चला गया है, इसलिए आपको आगे की कार्रवाई करनी होगी।
+
+---
+
+## 3️⃣ “रिवर्स / कैंसल” विकल्प देखें (यदि उपलब्ध हो)
+- कई UPI ऐप्स में **“Cancel Transaction”** या **“Request Refund”** का बटन मिलता है, लेकिन यह केवल **Pending** स्टेटस में ही काम करता है।  
+- यदि यह विकल्प उपलब्ध है, तो तुरंत **क्लिक करें** और निर्देशों का पालन करें।  
+
+> **नोट:** Successful ट्रांज़ैक्शन के बाद इस विकल्प का कोई असर नहीं रहता।
+
+---
+
+## 4️⃣ तुरंत अपने बैंक/UPI सपोर्ट से संपर्क करें
+1. **बैंक की हेल्पलाइन कॉल करें** (लगभग 24‑48 घंटे के भीतर प्रतिक्रिया मिलती है)।  
+2. कॉल में बताएं:  
+   - ट्रांज़ैक्शन आईडी / रेफ़रेंस नंबर  
+   - राशि (₹5,000)  
+   - गलत UPI ID (जैसे `xxxx@oksbi` – पूरा पता याद रखें)  
+   - ट्रांज़ैक्शन की तिथि‑समय  
+3. पूछें **“Transaction reversal / dispute”** के लिए फ़ॉर्म या प्रक्रिया।  
+4. कई बार बैंक आपसे **फ़ॉर्म भरवाएगा** (ऑनलाइन/ऑफ़लाइन) और **साक्ष्य** (स्क्रीनशॉट, बैंक स्टेटमेंट) मांगेगा।  
+
+> **सिफ़ारिश:** कॉल के दौरान एजेंट का **रिकॉर्डिंग** रखें (यदि कानूनी तौर पर अनुमति हो) ताकि बाद में जरूरत पड़ने पर प्रमाण मिल सके।
+
+---
+
+## 5️⃣ UPI ऐप की “Help/Support” सेक्शन से फ़ॉर्म जमा करें
+- ऐप खोलें → **‘Help/Support’** या **‘Contact Us’** → “**Incorrect Transfer / Refund Request**” चुनें।  
+- सभी आवश्यक जानकारी भरें:  
+  - ट्रांज़ैक्शन आईडी, राशि, दिन‑समय, गलत UPI ID, आपका मोबाइल नंबर/नाम।  
+  - समस्या का संक्षिप्त विवरण (गलत ID पर भेजा, अभी तक संपर्क नहीं हो सका)।  
+- **स्क्रीनशॉट** (ट्रांज़ैक्शन की पुष्टि, UPI ID आदि) अपलोड करें।  
+
+> अधिकांश ऐप्स 7‑10 कार्य दिवसों में जवाब देते हैं। यदि 2‑3 दिन में कोई अपडेट नहीं मिलता, तो फिर से फॉलो‑अप करें।
+
+---
+
+## 6️⃣ यदि रिसीवर का पता चल जाए तो सीधे संपर्क करने की कोशिश करें
+- कभी‑कभी ट्रांज़ैक्शन में रिसीवर का नाम/फ़ोन नंबर भी दिखता है।  
+- यदि आप **वो व्यक्ति या संस्था (जैसे दुकान, दोस्त)** पहचान पाते हैं, तो politely (शिष्टता से) **पैसे वापस करने की मांग करें**।  
+- लिखित रूप (WhatsApp/Email) में अनुरोध रखें, ताकि भविष्य में प्रमाण हो।  
+
+> **ध्यान दें:** अगर रिसीवर जवाब न दे या पैसे न लौटाए, तो आगे की कानूनी कार्रवाई करनी पड़ सकती है।
+
+---
+
+## 7️⃣ लिखित शिकायत (Written Complaint) दर्ज करें
+- **बैंक शाखा में जाकर** या **ऑनलाइन** (बैंक की वेबसाइट/मोबाइल ऐप) **एक लिखित शिकायत (complaint) दर्ज करें**।  
+- शिकायत में शामिल करें:  
+  - ट्रांज़ैक्शन विवरण (ID, राशि, दिन‑समय)  
+  - गलत UPI ID का पूरा पता  
+  - आपने अब तक क्या‑क्या कदम उठाए (कॉल, ऐप सपोर्ट, रिसीवर से संपर्क)।  
+- शिकायत का **Reference Number** सुरक्षित रखें।  
+
+---
+
+## 8️⃣ अगर ऊपर के सभी प्रयास विफल रहें – पुलिस रिपोर्ट दर्ज करें
+- **रसीद/स्क्रीनशॉट** और **बैंक/UPI ऐप की शिकायत रिफ़रेंस** के साथ **स्थानीय पुलिस स्टेशन** में FIR (First Information Report) दर्ज कराएँ।  
+- पुलिस को बताएं कि यह **साइबर फ़्रॉड/धोखाधड़ी** के अंतर्गत आता है।  
+
+> अधिकांश मामलों में बैंक/UPI प्रोवाइडर की मदद से पैसे वापस मिल जाता है, लेकिन अगर रिसीवर ने जानबूझकर धन रख लिया हो, तो पुलिस केस आवश्यक हो सकता है।
+
+---
+
+## 9️⃣ भविष्य में इस तरह की गलती से बचने के टिप्स
+| कदम | क्यों ज़रूरी? |
+|-----|--------------|
+| **UPI ID को दो‑बार चेक करें** | टाइपो (गलती) से बचें। |
+| **पहले छोटे राशि (₹10‑₹100) का टेस्ट ट्रांसफ़र** | पता चले कि ID सही है या नहीं। |
+| **कंटैक्ट लिस्ट में सेव करके** | अक्सर इस्तेमाल वाले ID को “Saved” रखें। |
+| **फ़ोन में UPI ऐप को अपडेट रखें** | नई सुरक्षा फीचर्स और रिवर्सल विकल्प मिलते हैं। |
+| **दो‑फ़ैक्टर ऑथेंटिकेशन (2FA) सक्षम करें** (यदि बैंक सपोर्ट करता हो) | अनधिकृत लेन‑देन रोकता है। |
+
+---
+
+### संक्षेप में
+1. ट्रांज़ैक्शन की स्थिति देखो → “Pending” हो तो तुरंत कैंसल/रिवर्सल.  
+2. “Successful” हो तो तुरंत **बैंक/UPI सपोर्ट** को कॉल करके **dispute** दर्ज करो।  
+3. ऐप की **Help/Support** से फ़ॉर्म भर कर जमा करो।  
+4. यदि रिसीवर का पता हो तो शिष्टतापूर्वक वापस माँगो।  
+5. लिखित शिकायत और रेफ़रेंस नंबर रखो।  
+6. अंत में, अगर सब फेल हो जाए तो पुलिस रिपोर्ट दर्ज करो।  
+
+इन चरणों को क्रमशः अपनाएँ; अधिकांश मामलों में 7‑10 कार्य दिवसों के भीतर बैंक/UPI प्रोवाइडर आपकी मदद करके राशि वापस कर देता है।  
+
+**शुभकामनाएँ—आशा है आपका पैसा जल्द वापस मिल जाए!** 🙏",,,4,"Response is comprehensive, step-by-step, and in Devanagari, but mixed English terms and the recording tip are slightly off from the user's Hinglish tone.",2272,47,0.1889
+T29,test,indic,hinglish,router,"Code-mixed, simple (rules) -> gpt-oss-120b (Groq)",tier2,rules,code_mixed,simple,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,116,105,95,0.0076,0.0,0,0.0,0.0076,919.2,0.0,0.16,919.4,0,no,stop,,service,service,yes,5,"The answer correctly identifies the complaint as 'service' based on the pending address change request, matching the reference answer and instructions.",265,37,0.0339
+T30,test,doc_qa,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,219,47,36,0.0058,0.0,0,0.0,0.0058,527.9,0.0,0.26,528.2,0,no,stop,,4500,4500,yes,5,The answer correctly identifies the processing fee amount and follows the instruction to reply with the number only.,385,31,0.0407
+T31,test,doc_qa,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,217,70,60,0.007,0.0,0,0.0,0.007,711.8,0.0,0.67,712.5,0,no,stop,,36,36,yes,5,The answer correctly calculates 3 years as 36 months and follows the instruction to reply with the number only.,378,35,0.0417
+T32,test,doc_qa,english,router,"English, moderate (rules) -> gpt-oss-120b (Groq)",tier2,rules,english,moderate,1.0,openai/gpt-oss-120b,tier2,ok,,no,,,183,72,61,0.0067,0.0,0,0.0,0.0067,617.0,0.0,0.75,617.8,0,no,stop,,2350,2350,yes,5,The answer correctly identifies the minimum amount due as 2350 and follows the instruction to reply with the number only.,349,37,0.0402
+T33,test,doc_qa,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,200,84,73,0.0038,0.0,0,0.0,0.0038,551.1,0.0,0.7,551.8,0,yes,stop,,111380,111380,yes,5,"The answer correctly extracts the maturity amount as a number only, matching the reference answer exactly.",368,30,0.039
+T34,test,doc_qa,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,187,145,135,0.0054,0.0,0,0.0,0.0054,547.7,0.0,0.18,547.9,0,yes,stop,,213,213,yes,5,The answer correctly calculates the remaining EMIs (240 - 27 = 213) and follows the instruction to reply with the number only.,357,45,0.0439
+T35,test,reasoning,english,router,"English, complex (rules) -> Nemotron 3 Ultra (NVIDIA)",tier3,rules,english,complex,1.0,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,135,1530,60,0.3968,0.0,0,0.0,0.3968,41430.2,0.0,0.16,41430.4,0,yes,stop,,"**Recommendation: Plan B is the significantly better choice for your specific profile.**
+
+While Plan A is cheaper, Plan B provides the **adequate coverage amount, necessary policy duration, and critical illness protection** that your financial responsibilities (home loan + two young dependents) demand.
+
+---
+
+### 📊 Side-by-Side Comparison
+
+| Feature | **Plan A** | **Plan B** | **Winner** |
+| :--- | :--- | :--- | :--- |
+| **Sum Assured** | **₹1 Crore** | **₹1.5 Crore** | **Plan B** |
+| **Policy Term** | Until Age 60 (28 years) | Until Age 70 (38 years) | **Plan B** |
+| **Annual Premium** | ₹11,800 | ₹18,900 | Plan A (Cheaper) |
+| **Claim Settlement Ratio** | 97.2% | 98.6% | **Plan B** |
+| **Critical Illness Rider** | ❌ Not Included | ✅ Included | **Plan B** |
+| **Cost per ₹1 Cr Cover (Annual)** | ₹11,800 | ₹12,600 | Plan A (Marginally) |
+
+---
+
+### 🎯 Why Plan B Wins for *Your* Situation
+
+#### 1. The Coverage Amount (₹1.5 Cr vs ₹1 Cr) – **Critical Factor**
+*   **The Math:** Your current liabilities = **Home Loan (₹40L)** + **Children’s Future Education/Marriage (est. ₹60L–₹80L)** + **Income Replacement for Spouse (10–15x annual income)**.
+*   **Plan A (₹1 Cr):** After paying off the ₹40L home loan, only **₹60L remains**. This is insufficient to fund two children’s higher education *and* provide 10+ years of monthly expenses for your spouse.
+*   **Plan B (₹1.5 Cr):** Leaves **₹1.1 Cr** after the home loan. This allows for loan clearance + children’s goals + a corpus generating ~₹6–7 Lakh/year for household expenses (via SWP/FDs).
+
+#### 2. The Policy Term (Age 70 vs Age 60) – **Critical Factor**
+*   **Your Age:** 32. **Children's Age:** ""Young"" (assume 2–6 years old).
+*   **Plan A (Ends at 60):** Policy expires when you are 60. Your youngest child will be ~28–32. If you pass away at 61, **there is zero payout** right when your retirement corpus might be depleted or health costs rise.
+*   **Plan B (Ends at 70):** Covers you through your working years **and** the vulnerable early retirement phase (60–70). This aligns with the ""liability clearance"" timeline (loan paid off, kids settled).
+
+#### 3. Critical Illness (CI) Rider – **High Value Add**
+*   At 32, the probability of a critical illness (cancer, heart attack, stroke) before 60 is statistically significant.
+*   **Without Rider (Plan A):** A diagnosis drains savings *and* stops income. The term policy pays **only on death**.
+*   **With Rider (Plan B):** Pays a lump sum (usually ₹10L–₹50L depending on rider config) **on diagnosis**. This protects your *investments* and *home loan EMIs* from being liquidated during treatment/recovery.
+*   *Buying this rider separately later will be expensive or impossible if health deteriorates.*
+
+#### 4. Claim Settlement Ratio (98.6% vs 97.2%)
+*   Both are good (>95%), but 98.6% indicates slightly better underwriting discipline and claims philosophy. For a ₹1.5 Cr claim, that 1.4% difference in probability matters.
+
+#### 5. The ""Real"" Cost Difference is Negligible
+*   **Extra Premium:** ₹7,100/year (≈ **₹19/day**).
+*   **What you get for ₹19/day:** **+₹50 Lakh Coverage + 10 Extra Years of Cover + Critical Illness Payout.**
+*   The *cost per ₹1 Lakh of cover* is almost identical (Plan A: ₹11.8k/Cr vs Plan B: ₹12.6k/Cr). You are not paying a ""loading"" penalty; you are buying appropriately.
+
+---
+
+### ⚠️ The Danger of Choosing Plan A (Underinsurance Trap)
+If you choose Plan A to save ₹7,100/year:
+1.  **Gap at Age 60:** You become uninsurable/unaffordable to re-insure at 60.
+2.  **CI Risk:** A single critical illness at age 45 could wipe out the savings you *thought* you made by choosing the cheaper premium.
+3.  **Inflation:** ₹1 Cr today ≈ ₹35–40 Lakh in 20 years. Plan B’s ₹1.5 Cr offers a better hedge.
+
+---
+
+### ✅ Action Plan for Plan B
+1.  **Confirm CI Rider Sum Assured:** Ensure the Critical Illness cover is at least **₹25–30 Lakh** (often riders are capped at lower amounts than base cover).
+2.  **Opt for ""Regular Pay"" (not Limited Pay):** At 32, spreading premiums over the full term (38 years) keeps annual outflow low (₹18,900) and beats inflation.
+3.  **Add ""Waiver of Premium"" Rider:** If not built-in, add it. Future premiums waived if you suffer total permanent disability or critical illness.
+4.  **Married Women’s Property (MWP) Act:** **Mandate** the policy under MWP Act (Section 6). This ensures the payout goes *only* to your wife/children, protected from your creditors/relatives/legal heirs.
+5.  **Disclose Home Loan:** Mention the ₹40L loan in the proposal form. Some insurers offer ""Home Loan Protection"" variants or require assignment; standard term cover is better as the nominee decides allocation.
+
+### Final Verdict
+**Buy Plan B.** The ₹592/month difference is the price of ensuring your wife isn't left choosing between paying the home loan EMI and paying your children's school fees if you aren't there. Plan A is a ""tax-saving ticket""; Plan B is a ""financial safety net.""",,,4,"Solid recommendation of Plan B with correct reasoning for coverage amount, duration, and CI rider, but contains a minor calculation inconsistency regarding the annual premium difference (calls it Rs 7,100 vs Rs 592/month in different places) and the MWP Act legal point is slightly generalized (applies to self-insured women).",1802,85,0.1678
+T36,test,reasoning,english,router,"English, complex (rules) -> Nemotron 3 Ultra (NVIDIA)",tier3,rules,english,complex,1.0,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,67,559,130,0.146,0.0,0,0.0,0.146,7399.0,0.0,0.16,7399.2,0,yes,stop,,"### **Formula**
+
+The standard formula for calculating EMI on a reducing balance basis is:
+
+$$EMI = \frac{P \times r \times (1+r)^n}{(1+r)^n - 1}$$
+
+**Where:**
+*   **$P$** = Principal Loan Amount
+*   **$r$** = Monthly Interest Rate (Annual Rate / 12 / 100)
+*   **$n$** = Loan Tenure in Months (Years $\times$ 12)
+
+---
+
+### **Calculation**
+
+**1. Identify the variables:**
+*   **Principal ($P$)** = ₹10,00,000
+*   **Annual Interest Rate** = 9%
+*   **Monthly Interest Rate ($r$)** = $\frac{9\%}{12} = 0.75\% = \mathbf{0.0075}$
+*   **Tenure ($n$)** = 5 years $\times$ 12 = **60 months**
+
+**2. Calculate $(1+r)^n$:**
+$$(1 + 0.0075)^{60} = (1.0075)^{60} \approx \mathbf{1.565681}$$
+
+**3. Apply the formula:**
+$$EMI = \frac{10,00,000 \times 0.0075 \times 1.565681}{1.565681 - 1}$$
+
+$$EMI = \frac{10,00,000 \times 0.0117426}{0.565681}$$
+
+$$EMI = \frac{11,742.61}{0.565681}$$
+
+$$EMI \approx 20,757.57$$
+
+---
+
+### **Final Answer**
+
+**Monthly EMI = ₹ 20,758** (Rounded to the nearest rupee)",20758,yes,5,"The answer correctly identifies the formula, calculates the parameters accurately, and arrives at the correct EMI of 20,758, matching the reference and task requirements perfectly.",727,48,0.0729
+T37,test,reasoning,english,router,"English, complex (rules) -> Nemotron 3 Ultra (NVIDIA)",tier3,rules,english,complex,1.0,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,145,1019,186,0.2674,0.0,0,0.0,0.2674,27983.7,0.0,0.34,27984.0,0,yes,stop,,"She should choose **Option 1: Prepay the home loan**.
+
+Here is the step-by-step reasoning:
+
+### 1. Determine the *Marginal* Tax Benefit on Home Loan Interest
+This is the most critical factor.
+*   The customer **already claims the full ₹2 lakh deduction** under Section 24(b) (Old Regime).
+*   The current outstanding loan is ₹22 lakh @ 8.75%. The interest component for the first year will be approx **₹1.9 lakh**.
+*   Since she is already maxing out the ₹2 lakh limit, **any additional interest paid (or saved) provides zero tax benefit.**
+*   **Conclusion:** The effective cost of the loan for this marginal ₹3 lakh decision is the **full 8.75%** (no tax shield).
+
+### 2. Calculate Post-Tax Return on Option 2 (Fixed Deposit)
+*   FD Rate: **7.1%**
+*   Tax Bracket: **30%** (plus applicable surcharge/cess; assuming effective ~31.2%).
+*   Post-Tax Return = $7.1\% \times (1 - 0.312) \approx \mathbf{4.88\%}$.
+
+### 3. Compare ""Apples to Apples"": Guaranteed Return vs. Guaranteed Savings
+*   **Option 1 (Prepay):** Guaranteed, risk-free **saving of 8.75%** per annum on the ₹3 lakh used.
+*   **Option 2 (FD):** Guaranteed, risk-free **earning of ~4.88%** per annum on the ₹3 lakh invested.
+*   **Net Advantage:** Prepaying saves **~3.87% more per year** (8.75% - 4.88%).
+
+### 4. Quantitative Impact (First Year)
+*   **Interest Saved (Prepay):** ₹3,00,000 × 8.75% = **₹26,250**
+*   **FD Interest Earned (Post-Tax):** ₹3,00,000 × 4.88% ≈ **₹14,640**
+*   **Net Gain by Prepaying:** ₹26,250 - ₹14,640 = **₹11,610** in just the first year.
+
+### 5. Address the ""EMI Same"" Condition
+*   The prompt specifies ""keep the EMI the same.""
+*   This results in a **reduction of loan tenure** (approx. 2.5–3 years knocked off the 15-year schedule).
+*   The customer becomes debt-free significantly earlier, eliminating years of future EMIs (total savings run into lakhs).
+
+### 6. Liquidity & Risk Consideration
+*   **Liquidity:** The FD offers liquidity (with a small penalty for premature withdrawal). Prepaying locks the money into the house (illiquid).
+*   **Risk:** Both are effectively risk-free (Home loan prepay = guaranteed return; FD = DICGC insured up to ₹5L).
+*   **Verdict:** Unless the customer has **zero emergency fund** or anticipates an immediate large expense requiring this specific ₹3L, the mathematical advantage of prepaying (almost **double the post-tax yield**) vastly outweighs the liquidity benefit of a 1-year FD.
+
+---
+
+### Summary Recommendation
+**Prepay the home loan (Option 1).**
+Because the ₹2 lakh tax deduction limit is already exhausted, the loan costs a full **8.75%** post-tax, while the FD yields only **~4.88%** post-tax. Prepaying offers a guaranteed, risk-free arbitrage gain of nearly **3.9% per annum**.",,,5,"Correctly identifies that the full home loan interest deduction is already utilized, making the prepayment yield the full 8.75%, which significantly exceeds the post-tax FD yield of ~4.88%; reasoning is complete, accurate, and in the correct language.",1166,70,0.1142
+T38,test,reasoning,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,151,389,236,0.0121,0.0,0,0.0,0.0121,894.2,0.0,0.12,894.3,0,yes,stop,,"**Closing balance is not correct.**
+
+- **Opening balance:** ₹48,200  
+- **Total credits:** ₹12,500 + ₹3,750 = ₹16,250  
+- **Total debits:** ₹9,800 + ₹2,450 + ₹15,000 = ₹27,250  
+
+\[
+\text{Correct closing} = \text{Opening} + \text{Credits} - \text{Debits} \\
+= 48,200 + 16,250 - 27,250 = 37,200
+\]
+
+The statement shows ₹37,800, which is ₹600 too high. The correct closing balance should be **₹37,200**.",37200,yes,5,"The calculation is correct (48,200 + 16,250 - 27,250 = 37,200), identifies the error, and matches the reference answer with complete reasoning.",502,61,0.0608
+T39,test,reasoning,english,router,"English, simple (rules) -> gpt-oss-20b (Groq)",tier1,rules,english,simple,1.0,openai/gpt-oss-20b,tier1,ok,,no,,,138,702,407,0.0208,0.0,0,0.0,0.0208,1230.2,0.0,0.19,1230.4,0,yes,stop,,"**Step‑by‑step calculation**
+
+| Step | Description | Amount (₹) | Explanation |
+|------|-------------|------------|-------------|
+| 1 | **Original claim amount** | 1,80,000 | Total amount for the claim submitted. |
+| 2 | **Deductible** | –20,000 | Policy has a deductible of ₹20,000 that is taken out first. |
+| 3 | **Amount after deductible** | 1,60,000 | 1,80,000 – 20,000 = 1,60,000. |
+| 4 | **Policyholder’s co‑payment (10 %)** | –16,000 | 10 % of the post‑deductible amount: 1,60,000 × 0.10 = 16,000. |
+| 5 | **Insurer’s payment** | 1,44,000 | 90 % of the post‑deductible amount: 1,60,000 × 0.90 = 1,44,000. |
+| 6 | **Check against sum insured** | 5,00,000 | 1,44,000 ≤ 5,00,000, so the insurer can pay the full amount calculated. |
+
+**Answer:** The insurer will pay **₹1,44,000**.",144000,yes,5,"The calculation is correct, follows the requested steps, and matches the reference answer.",652,28,0.0597
+T40,test,reasoning,english,router,"English, complex (rules) -> Nemotron 3 Ultra (NVIDIA)",tier3,rules,english,complex,1.0,nvidia/nemotron-3-ultra-550b-a55b,tier3,ok,,no,,,198,1371,59,0.3599,0.0,0,0.0,0.3599,39119.6,0.0,0.55,39120.2,0,yes,stop,,"**Decision: YES, the bank should block the card immediately.**
+
+This is a textbook **Card-Present (CP) / Card-Not-Present (CNP) fraud pattern** involving a cloned physical card and compromised digital credentials. The velocity, geography, and behavioral deviations make legitimate use statistically impossible.
+
+---
+
+### Step-by-Step Pattern Analysis
+
+#### 1. Baseline Establishment (10:02 PM – Pune Fuel Station)
+*   **Transaction:** ₹1,200 at a fuel station in Pune (Card Present).
+*   **Analysis:** This fits the cardholder’s profile (Location: Pune, Amount: Low/Typical).
+*   **Fraud Indicator:** **The ""Test Transaction.""** Fraudsters almost always make a small, low-risk ""chip-and-pin"" or contactless purchase first to verify the *physical clone* works before attempting high-value theft. This confirms the attacker possesses a working physical counterfeit card.
+
+#### 2. Digital Credential Exploitation (10:09 PM & 10:11 PM – Electronics Website)
+*   **Transactions:** Two attempts of ₹49,999 at the same electronics site (CNP). First approved, second declined (Limit Exceeded).
+*   **Analysis:**
+    *   **Amount Structuring:** ₹49,999 is a deliberate attempt to bypass **₹50,000 velocity/authorization thresholds** common in Indian banking rules (often triggering additional OTP/2FA or manual review).
+    *   **Velocity:** 2 minutes after the fuel swipe. The cardholder cannot physically travel from a Pune fuel station to a desktop/mobile to place a high-value online order in 2 minutes.
+    *   **Channel Conflict:** **Simultaneous CP (Pune) + CNP (Online) usage.** This proves the PAN/CVV/Expiry (digital credentials) are compromised *separately* from the physical EMV chip data (or the fraudster has a sophisticated setup cloning both).
+    *   **Merchant Category:** Electronics = High resale value / Easy liquidation.
+
+#### 3. Geographic Impossibility (10:20 PM – Kolkata Jewellery Store)
+*   **Transaction:** ₹15,000 at a jewellery store in Kolkata (Card Present).
+*   **Analysis:** **The ""Smoking Gun.""**
+    *   **Distance:** Pune to Kolkata is ~1,600 km (2.5 hr flight, 24+ hr train/road).
+    *   **Time Delta:** 11 minutes after the Pune fuel transaction (10:09 → 10:20).
+    *   **Physical Impossibility:** The cardholder cannot be in Pune and Kolkata simultaneously.
+    *   **Merchant Category:** Jewellery = **High-risk MCC (5094/5944)**. Primary target for cash-out via gold/diamond purchase (instant liquidity, hard to trace).
+    *   **Conclusion:** A second physical clone (or the same one used by a mule) is active in Kolkata.
+
+#### 4. Credential Verification / Tokenization Attempt (10:27 PM – Intl Verification)
+*   **Transaction:** ₹2 International verification charge (Unknown Merchant).
+*   **Analysis:**
+    *   **Zero-Auth / $1-2 Auth:** Standard behavior for adding a card to a digital wallet (Apple Pay/Google Pay), saving it on a merchant portal (Amazon/Netflix), or testing validity on the dark web (""carding"" forums).
+    *   **International Routing:** Suggests the fraudster is testing if the card works on international rails (less stringent 3D Secure) or provisioning it into a tokenized wallet for future CNP use without OTP.
+    *   **Timing:** 7 minutes after Kolkata. The fraud ring is maximizing utility of the compromised data before the block hits.
+
+---
+
+### Summary of Risk Flags
+
+| Feature | Observation | Risk Level |
+| :--- | :--- | :--- |
+| **Geographic Velocity** | Pune → Kolkata in 18 mins (Physically Impossible) | **CRITICAL** |
+| **Channel Velocity** | CP (Pune) → CNP (Web) → CP (Kolkata) in 25 mins | **CRITICAL** |
+| **Amount Structuring** | ₹49,999 x 2 (Threshold Evasion) | **HIGH** |
+| **Merchant Risk** | Electronics (Resale) + Jewellery (Cash-out) | **HIGH** |
+| **Profile Deviation** | Monthly spend <₹10k vs ₹1.15L attempted in 25 mins | **HIGH** |
+| **Verification Charge** | Post-fraud tokenization/wallet provisioning | **MEDIUM** |
+
+---
+
+### Final Justification for Blocking
+
+**Do not wait for customer confirmation.** The ""Limit Exceeded"" decline at 10:11 PM saved the bank ~₹50k, but the ₹15k Kolkata transaction (10:20 PM) **was approved**. The physical card clone is active and liquidating assets *right now*.
+
+**Immediate Actions Required:**
+1.  **Hard Block (Hotlist):** Permanent block on the PAN. Do not use a ""temporary freeze""; the compromise is total (Chip + Magstripe + CNP credentials).
+2.  **Chargeback Initiation:** Immediate dispute for the Kolkata ₹15k (CP liability shift may apply if EMV was used, but liability depends on terminal capability; Jewellery stores often have legacy terminals).
+3.  **Re-issue:** Expedite new card with new PAN/CVV to customer's registered address.
+4.  **Fraud Ring Alert:** Flag the Kolkata jewellery terminal ID and the Electronics Website Merchant ID for network-level monitoring (Visa/Mastercard CAF/SAFE reporting).
+
+**Verdict:** This is not ""suspicious activity."" This is **confirmed, active, multi-channel fraud.** Block the card now.",,,5,"The analysis correctly identifies the critical fraud indicators (geographic impossibility, velocity, profile deviation) and provides a well-justified decision to block the card with comprehensive follow-up actions.",1686,49,0.1455

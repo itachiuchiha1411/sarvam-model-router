@@ -1,0 +1,4 @@
+﻿config,prompts,total_cost_inr,avg_cost_per_prompt_inr,p95_latency_ms,avg_quality,share_scoring_4_or_5,judged,exact_match_rate,fallbacks,failed,rate_limit_retries,judge_cost_inr,router_cost_inr,routed_share_by_prompts,token_share_by_tier
+always_cheapest,40,0.8578,0.02144,2407.0,4.58,88%,40 of 40,95%,1,0,0,2.4,0.0,,
+always_frontier,40,3.5369,0.08842,31996.0,4.72,95%,40 of 40,100%,0,0,0,2.3953,0.0,,
+router,40,1.7084,0.04271,28541.0,4.7,92%,40 of 40,100%,0,0,0,2.3254,0.0,T1 30% / T2 57% / T3 12%,T1 21% / T2 49% / T3 30%

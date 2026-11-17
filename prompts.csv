@@ -1,0 +1,260 @@
+﻿"id","set","category","language","prompt","expected_answer"
+"P01","practice","classification","english","Classify this customer complaint into exactly one category: billing, fraud or service. Reply with the category only.
+Complaint: ""I was charged a late payment fee even though I paid my credit card bill two days before the due date.""","billing"
+"P02","practice","extraction","english","From the SMS below, extract the loan account number. Reply with the number only.
+SMS: ""Dear customer, EMI of Rs 9,450 for loan a/c 40072318 is due on 7 Dec. Please keep sufficient balance. - Kaveri Bank""","40072318"
+"P03","practice","summary","english","Summarise this call-centre transcript in three bullet points: the customer's issue, what the agent did, and the next step.
+
+Transcript:
+
+Agent: Kaveri Bank, this is Meera. How may I help you?
+Customer: I requested a new cheque book through the app three weeks ago and it still hasn't arrived.
+Agent: I'm sorry about the delay. Could you confirm your account number's last four digits?
+Customer: 3309.
+Agent: Thank you. I can see the request. The cheque book was dispatched on the 2nd, but the courier returned it because the address on file is your old flat.
+Customer: Oh, I moved last month. I updated my address in the app.
+Agent: The update was made after the dispatch, so the courier used the old address. I've now cancelled the returned cheque book and placed a fresh request to your new address, at no charge.
+Customer: How long will it take?
+Agent: Five to seven working days. You'll get an SMS with the tracking number once it's dispatched.
+Customer: Okay, thank you.",""
+"P04","practice","translation","en-to-hindi","Translate this message into Hindi: 'Your KYC documents have been verified. Your savings account is now fully active.'",""
+"P05","practice","indic","hindi","नीचे दी गई शिकायत को billing, fraud या service में से किसी एक श्रेणी में रखें। उत्तर में केवल अंग्रेज़ी में श्रेणी का नाम लिखें।
+शिकायत: ""मेरे खाते से मेरी जानकारी के बिना ₹15,000 का UPI ट्रांसफर हो गया है।""","fraud"
+"P06","practice","indic","hinglish","Mera debit card ATM mein atak gaya aur machine ne card wapas nahi diya. Ab main kya karun? Short mein steps batao.",""
+"P07","practice","indic","tamil","என் கிரெடிட் கார்டு பில் தொகையை எப்படித் தெரிந்துகொள்வது? இரண்டு வழிகளைச் சுருக்கமாகச் சொல்லுங்கள்.",""
+"P08","practice","doc_qa","english","Read the loan summary and answer the question.
+
+LOAN SUMMARY - Sahyadri Bank
+Loan type: Two-wheeler loan
+Loan amount: Rs 95,000
+Interest rate: 10.5% per annum
+Tenure: 48 months
+EMI: Rs 2,432
+First EMI date: 5 January 2027
+
+Question: What is the tenure of the loan in months? Reply with the number only.","48"
+"P09","practice","reasoning","english","A customer wants to deposit Rs 2,00,000 for one year. Option A pays 7.0% simple interest. Option B pays 6.8% a year compounded quarterly. Calculate the maturity amount for each option and recommend one, showing your working.","214000"
+"P10","practice","indic","bengali","মেয়াদ শেষ হওয়ার আগে ফিক্সড ডিপোজিট ভাঙলে কি জরিমানা দিতে হয়? সংক্ষেপে বুঝিয়ে বলুন।",""
+"T01","test","classification","english","Classify this customer complaint into exactly one category: billing, fraud or service. Reply with the category only.
+Complaint: ""Someone used my debit card for three online purchases in another city while the card was with me.""","fraud"
+"T02","test","classification","english","Classify this customer complaint into exactly one category: billing, fraud or service. Reply with the category only.
+Complaint: ""The branch has been closed for renovation and nobody told us where to go to update our passbooks.""","service"
+"T03","test","classification","english","Classify this customer complaint into exactly one category: billing, fraud or service. Reply with the category only.
+Complaint: ""My home loan EMI was debited twice from my account this month.""","billing"
+"T04","test","extraction","english","Extract the EMI amount in rupees from this message. Reply with the number only.
+Message: ""Your car loan EMI of Rs 18,750 will be auto-debited on 10 January from your account ending 4412.""","18750"
+"T05","test","extraction","english","Extract the policy number from this line. Reply with the policy number only.
+Line: ""Renewal reminder for policy SL-2207-88413: a premium of Rs 14,200 is due by 31 March.""","SL-2207-88413"
+"T06","test","classification","english","Classify the customer's intent into one of these labels: card_block, balance_enquiry, loan_enquiry, address_change. Reply with the label only.
+Message: ""I lost my wallet this morning. Please make sure nobody can use my credit card.""","card_block"
+"T07","test","classification","english","Is this customer feedback positive, negative or neutral? Reply with one word.
+Feedback: ""The agent fixed my problem in five minutes and even followed up by email. Very impressed.""","positive"
+"T08","test","extraction","english","Extract the IFSC code from this text. Reply with the code only.
+Text: ""Please transfer the refund to account 50100234567812, IFSC KVRB0001234, account holder Meena Raghavan.""","KVRB0001234"
+"T09","test","summary","english","Summarise this call-centre transcript in three bullet points: the customer's issue, what the agent did, and the next step.
+
+Transcript:
+
+Agent: Good afternoon, thank you for calling Kaveri Bank card services. This is Priya. How may I help you?
+Customer: Hi Priya. I'm calling about my credit card. I bought a mobile phone online on the 3rd for Rs 24,999, and the charge shows up twice on my statement.
+Agent: I'm sorry about that, sir. May I have the last four digits of the card and your registered mobile number for verification?
+Customer: It's 7781, and the mobile number is the one I'm calling from.
+Agent: Thank you, you're verified. I can see two transactions of Rs 24,999 at the same merchant, two minutes apart. Did you receive one order or two?
+Customer: Just one. The website showed an error the first time, so I clicked pay again.
+Agent: Understood. That happens when a payment page times out. I'm raising a dispute for the second transaction now. Your dispute reference number is DSP-558201.
+Customer: How long will it take?
+Agent: The merchant has up to 30 days to respond, but most cases are resolved within 7 to 10 working days. I've also placed a temporary credit of Rs 24,999 on your card, so you won't pay interest on it while the dispute is open.
+Customer: Okay, that helps. Do I need to send anything?
+Agent: Please email the order confirmation showing a single order to our disputes team. You'll get an SMS with the email address in a few minutes.
+Customer: Fine, I'll do that today.
+Agent: Is there anything else I can help you with?
+Customer: No, that's all. Thanks.
+Agent: Thank you for calling Kaveri Bank. Have a good day.",""
+"T10","test","summary","english","Summarise this call-centre transcript in three bullet points: the customer's issue, what the agent did, and the next step.
+
+Transcript:
+
+Agent: Navodaya Finance, this is Arjun speaking. How can I help?
+Customer: Hello. I have a personal loan with you and I want to close it early. I got my annual bonus.
+Agent: That's great. Could you share your loan account number?
+Customer: It's 7700 4521.
+Agent: Thank you, Ms Fernandes. The loan started fourteen months ago, and the outstanding principal is Rs 2,18,400.
+Customer: What will I have to pay to close it today?
+Agent: Since you've paid more than 12 EMIs, the foreclosure charge is 2% of the outstanding principal, which is Rs 4,368, plus 18% GST on that charge, Rs 786. There's also interest for the days since your last EMI, about Rs 1,950. So the total is roughly Rs 2,25,504.
+Customer: Two percent? I thought there was no charge after one year.
+Agent: That applies to loans taken after April last year. Your loan was sanctioned before that, so the older terms apply. I can send you the clause from your agreement.
+Customer: Please do. And how do I pay?
+Agent: I'll email you a foreclosure letter today. It's valid for seven days, and you can pay through net banking using the reference on the letter. Once the payment clears, we'll issue a no-dues certificate within 10 working days.
+Customer: Okay. Can you also stop the auto-debit for next month?
+Agent: Yes. I've put a hold on the December auto-debit, which takes effect once the foreclosure is paid.
+Customer: Thank you.
+Agent: You're welcome. Have a nice day.",""
+"T11","test","summary","english","Summarise this call-centre transcript in three bullet points: the customer's issue, what the agent did, and the next step.
+
+Transcript:
+
+Agent: Shubh Health Insurance, this is Kavitha. How may I help you?
+Customer: My father was admitted to hospital two days ago for knee surgery. The hospital applied for cashless approval, but they say they haven't heard back from you.
+Agent: I'm sorry to hear that. Could you give me the policy number?
+Customer: SH-4410-2291.
+Agent: Thank you. The pre-authorisation request came in yesterday at 4 pm. It's on hold because the hospital hasn't sent the doctor's notes on how long your father has had the knee problem.
+Customer: Why does that matter?
+Agent: Your father's policy is two years old, and knee replacement has a three-year waiting period if it's linked to a pre-existing condition. Our medical team needs the notes to check whether the waiting period applies.
+Customer: The surgery is scheduled for tomorrow morning. What happens if you don't approve it in time?
+Agent: I've marked the request as urgent. If the hospital's insurance desk uploads the notes in the next two hours, we can usually decide by tonight. If it isn't approved before surgery, you can pay the hospital and file a reimbursement claim within 30 days of discharge.
+Customer: Okay, I'll go to the insurance desk right now.
+Agent: I'll also send you an SMS with the request number so the desk can quote it. Is there anything else?
+Customer: No. Please make sure someone looks at it today.
+Agent: I will. I'll call you back by 7 pm with an update.",""
+"T12","test","summary","english","Summarise this call-centre transcript in three bullet points: the customer's issue, what the agent did, and the next step.
+
+Transcript:
+
+Agent: Sahyadri Bank digital support, this is Rohit.
+Customer: Hi. I've been trying to finish video KYC on your app for my new savings account, and it keeps failing.
+Agent: Sorry about that. What happens when it fails?
+Customer: It connects to the agent, then after a minute it says ""session expired"" and drops.
+Agent: Which phone and app version are you using?
+Customer: An Android phone, and I updated the app yesterday.
+Agent: Thank you. I can see three attempts from your number today. All three dropped when the camera switched to scan your PAN card. That usually happens when the app doesn't have permission to use the rear camera, or when the network is weak.
+Customer: I'm on Wi-Fi. Video calls work fine.
+Agent: Then let's check permissions. Please go to Settings, Apps, Sahyadri Bank, Permissions, and check the Camera setting.
+Customer: It says ""Ask every time"".
+Agent: Please change it to ""Allow while using the app"" and try again. Video KYC is available until 9 pm today.
+Customer: And if it still fails?
+Agent: Then you can book a video KYC slot at a fixed time from the app, or visit any branch with your PAN and Aadhaar. Your application stays valid for 30 days, so you won't lose your progress.
+Customer: Okay, I'll try now.
+Agent: I'll stay on the line while you try, if you like.
+Customer: Yes, please... It worked this time.
+Agent: Great. Your account will be activated within 24 hours, and you'll get an SMS with your account number.",""
+"T13","test","summary","english","Summarise this call-centre transcript in three bullet points: the customer's issue, what the agent did, and the next step.
+
+Transcript:
+
+Agent: Kaveri Bank customer care, Sneha speaking. How can I help?
+Customer: Hello madam. I paid Rs 6,200 to a grocery shop through UPI five days ago. The payment failed, but the money was debited from my account.
+Agent: I'm sorry for the trouble. Could you tell me the UPI transaction reference number? It's a 12-digit number in your app.
+Customer: 4123 5567 8890.
+Agent: Thank you. I can see the transaction. Our side debited the amount, but the shopkeeper's bank didn't confirm the credit, so it's showing as ""pending reversal"".
+Customer: The app said I would get the money back in 48 hours. It's been five days.
+Agent: You're right, and I apologise for the delay. Under the RBI's rules for failed transactions, the reversal should happen by the next working day, and if it's late, the bank pays you Rs 100 for each day of delay.
+Customer: So when will I get my money?
+Agent: I've raised a complaint to fast-track the reversal. Your complaint number is UPI-77341. The amount should be back in your account within 2 working days, and the compensation for the delay will be credited separately.
+Customer: Okay. What if it doesn't come?
+Agent: If it isn't credited by Friday, please call us with the complaint number and we'll escalate it to the grievance team. You can also track it in the app under Help, UPI disputes.
+Customer: Fine. Thank you.
+Agent: Thank you for your patience. Have a good day.",""
+"T14","test","summary","english","Summarise this call-centre transcript in three bullet points: the customer's issue, what the agent did, and the next step.
+
+Transcript:
+
+Agent: Navodaya Home Finance, this is Imran. How can I help you today?
+Customer: I got a letter saying my home loan interest rate is going up from 8.4% to 8.9%. Why? I haven't missed a single EMI.
+Agent: I understand your concern, sir. This isn't related to your repayment record. Your loan is linked to the repo rate, and the change follows the increase announced last month. Every borrower on a repo-linked loan sees the same change.
+Customer: So my EMI will go up?
+Agent: By default, we keep your EMI the same and extend the tenure. For your loan, the remaining tenure would go from 168 months to about 178 months.
+Customer: Ten more months? I don't want that.
+Agent: You have two other options. You can increase the EMI from Rs 31,200 to about Rs 32,100 and keep the original end date. Or you can make a part-prepayment to reduce the principal. There's no charge for prepaying a floating-rate home loan.
+Customer: What's the deadline to choose?
+Agent: The new rate applies from your January EMI. If you want to increase the EMI, please submit the request by 20 December, in the app under Loan Services, or I can raise it now on this call.
+Customer: Let me discuss it with my wife first. Can you email me both calculations?
+Agent: Of course. I'll email a comparison of the two options to your registered email address today.
+Customer: Okay, thanks.
+Agent: Thank you for calling Navodaya Home Finance.",""
+"T15","test","translation","en-to-marathi","Translate this SMS into Marathi: 'Dear customer, your two-wheeler loan EMI of Rs 3,200 is due on 5 December. Please keep enough balance in your account to avoid a late fee.'",""
+"T16","test","translation","en-to-tamil","Translate this message into Tamil: 'Your life insurance policy will lapse if the premium of Rs 11,500 is not paid by 20 December. Pay now using the Shubh Life app.'",""
+"T17","test","translation","en-to-bengali","Translate this alert into Bengali: 'We noticed a login to your net banking from a new device. If this was not you, call 1800-000-1234 immediately. Never share your OTP with anyone.'",""
+"T18","test","translation","en-to-hindi","Translate this notice into Hindi: 'Your account statement for October is ready. You can download it from the app under Accounts, then Statements.'",""
+"T19","test","translation","en-to-kannada","Translate this message into Kannada: 'Your claim of Rs 42,000 has been approved. The amount will be credited to your bank account within 3 working days.'",""
+"T20","test","indic","hindi","नीचे दी गई शिकायत को billing, fraud या service में से किसी एक श्रेणी में रखें। उत्तर में केवल अंग्रेज़ी में श्रेणी का नाम लिखें।
+शिकायत: ""मेरे क्रेडिट कार्ड पर ऐसा वार्षिक शुल्क लगाया गया है जिसके बारे में मुझे कभी नहीं बताया गया था।""","billing"
+"T21","test","indic","hindi","एक ग्राहक लिखते हैं: ""मेरे बीमा क्लेम की राशि 20 दिन से नहीं आई है।"" बैंक की ओर से हिंदी में तीन वाक्यों का एक विनम्र जवाब लिखिए, जिसमें अगला कदम भी बताया गया हो।",""
+"T22","test","indic","hindi","इस संदेश से EMI की राशि निकालिए और केवल संख्या लिखिए।
+संदेश: ""प्रिय ग्राहक, आपके पर्सनल लोन की ₹7,850 की EMI 5 तारीख को आपके खाते से कटेगी।""","7850"
+"T23","test","indic","hindi","सरल हिंदी में समझाइए कि क्रेडिट स्कोर क्या होता है और इसे कैसे सुधारा जा सकता है। चार वाक्यों से ज़्यादा न लिखें।",""
+"T24","test","indic","tamil","கீழே உள்ள புகாரை billing, fraud, service ஆகியவற்றில் ஏதேனும் ஒன்றாக வகைப்படுத்துங்கள். ஆங்கிலத்தில் வகையின் பெயரை மட்டும் எழுதுங்கள்.
+புகார்: ""எனக்குத் தெரியாமல் என் கணக்கிலிருந்து ₹8,000 எடுக்கப்பட்டுள்ளது. நான் யாரிடமும் OTP சொல்லவில்லை.""","fraud"
+"T25","test","indic","tamil","ஒரு வாடிக்கையாளர் கேட்கிறார்: ""என் வீட்டுக் கடனின் வட்டி விகிதம் ஏன் உயர்ந்தது? என் EMI-யும் அதிகமாகுமா?"" வங்கியின் சார்பில் தமிழில் மூன்று வாக்கியங்களில் பணிவான பதில் எழுதுங்கள்.",""
+"T26","test","indic","bengali","নিচের অভিযোগটিকে billing, fraud বা service - এই তিনটির যেকোনো একটি শ্রেণিতে রাখুন। শুধু ইংরেজিতে শ্রেণির নাম লিখুন।
+অভিযোগ: ""তিনবার শাখায় গিয়েও আমার পাসবুক আপডেট হয়নি, কেউ সাহায্য করছে না।""","service"
+"T27","test","indic","bengali","সহজ বাংলায় তিন বাক্যে বুঝিয়ে বলুন: টার্ম ইনস্যুরেন্স আর এন্ডাওমেন্ট পলিসির মধ্যে মূল পার্থক্য কী?",""
+"T28","test","indic","hinglish","Yaar maine galti se ₹5,000 galat UPI ID pe bhej diye. Paise wapas kaise milenge? Step by step batao, jaldi.",""
+"T29","test","indic","hinglish","Is complaint ko billing, fraud ya service mein classify karo, sirf category likho:
+""Bank wale mera address change request teen hafte se pending rakhe hue hain, har baar bolte hain kal ho jayega.""","service"
+"T30","test","doc_qa","english","Read the sanction letter and answer the question.
+
+SANCTION LETTER - Navodaya Finance Ltd.
+Borrower: Ramesh Kulkarni
+Loan type: Personal loan
+Sanctioned amount: Rs 4,50,000
+Interest rate: 13.5% per annum (fixed)
+Tenure: 36 months
+EMI: Rs 15,271
+Processing fee: Rs 4,500 plus GST, deducted from the disbursal amount
+Prepayment charge: 4% of principal outstanding if prepaid within 12 months; nil after that
+Late payment charge: Rs 750 per missed EMI
+
+Question: What is the processing fee in rupees, before GST? Reply with the number only.","4500"
+"T31","test","doc_qa","english","Read the policy schedule and answer the question.
+
+POLICY SCHEDULE - Shubh Health Shield
+Policy number: SH-9921-4407
+Sum insured: Rs 5,00,000
+Room rent limit: 1% of sum insured per day
+Initial waiting period: 30 days (does not apply to accidents)
+Waiting period for pre-existing diseases: 3 years from the first policy start date
+Co-payment: 10% for insured persons aged 61 and above
+No-claim bonus: 10% of sum insured for each claim-free year, up to 50%
+
+Question: For how many months must the insured wait before a pre-existing disease is covered? Reply with the number only.","36"
+"T32","test","doc_qa","english","Read the credit card statement summary and answer the question.
+
+STATEMENT SUMMARY - Kaveri Bank Platinum Card
+Statement date: 12 November 2026
+Payment due date: 2 December 2026
+Credit limit: Rs 1,50,000
+Total amount due: Rs 23,480
+Minimum amount due: Rs 2,350
+Available credit: Rs 1,26,520
+Finance charges this cycle: Rs 0
+
+Question: What is the minimum amount due in rupees? Reply with the number only.","2350"
+"T33","test","doc_qa","english","Read the fixed deposit receipt and answer the question.
+
+FIXED DEPOSIT RECEIPT - Sahyadri Bank
+Depositor: Anita Deshpande
+Principal: Rs 1,00,000
+Interest rate: 7.25% per annum, compounded quarterly
+Tenure: 18 months
+Start date: 15 June 2026
+Maturity date: 15 December 2027
+Maturity amount: Rs 1,11,380
+Premature withdrawal penalty: 1% lower interest rate than the rate applicable
+
+Question: What is the maturity amount in rupees? Reply with the number only.","111380"
+"T34","test","doc_qa","english","Read the home loan statement and answer the question.
+
+HOME LOAN STATEMENT - Navodaya Home Finance
+Loan account: HL-0045-7712
+Loan amount: Rs 35,00,000
+Original tenure: 240 months
+EMIs paid so far: 27
+Current interest rate: 8.65% per annum (repo-linked)
+Current EMI: Rs 30,720
+Outstanding principal: Rs 33,40,000
+
+Question: How many EMIs remain to be paid on the original tenure? Reply with the number only.","213"
+"T35","test","reasoning","english","Compare these two term insurance plans for a 32-year-old non-smoker with a home loan of Rs 40 lakh and two young children, and recommend one with reasons.
+Plan A: Rs 1 crore cover until age 60, premium Rs 11,800 a year, claim settlement ratio 97.2%.
+Plan B: Rs 1.5 crore cover until age 70, premium Rs 18,900 a year, claim settlement ratio 98.6%, includes a critical illness rider.",""
+"T36","test","reasoning","english","Calculate the monthly EMI for a loan of Rs 10,00,000 at 9% annual interest for 5 years, on a reducing balance. Show the formula, then give the EMI rounded to the nearest rupee.","20758"
+"T37","test","reasoning","english","A customer has Rs 3,00,000 of spare cash. Her home loan has Rs 22,00,000 outstanding at 8.75% a year with 15 years left, and she already claims the full Rs 2 lakh home loan interest deduction under the old tax regime. She is in the 30% tax bracket. Option 1: prepay the home loan and keep the EMI the same. Option 2: put the money in a one-year fixed deposit at 7.1%. Which option should she choose? Explain your reasoning step by step.",""
+"T38","test","reasoning","english","A customer's monthly statement shows an opening balance of Rs 48,200, credits of Rs 12,500 and Rs 3,750, debits of Rs 9,800, Rs 2,450 and Rs 15,000, and a closing balance of Rs 37,800. Check whether the closing balance is correct. If it is not, give the correct closing balance.","37200"
+"T39","test","reasoning","english","A health insurance claim is for Rs 1,80,000. The policy has a deductible of Rs 20,000, which is applied first, and then a 10% co-payment on the remaining amount. The sum insured is Rs 5,00,000. How much will the insurer pay? Show each step.","144000"
+"T40","test","reasoning","english","These transactions happened on one credit card within 25 minutes:
+1. 10:02 pm - Rs 1,200 at a fuel station in Pune
+2. 10:09 pm - Rs 49,999 at an electronics website
+3. 10:11 pm - Rs 49,999 at the same electronics website (declined: limit exceeded)
+4. 10:20 pm - Rs 15,000 at a jewellery store in Kolkata (card present)
+5. 10:27 pm - Rs 2 international verification charge from an unknown merchant
+The cardholder lives in Pune and usually spends under Rs 10,000 a month. Should the bank block the card? Analyse the pattern step by step and justify your decision.",""
